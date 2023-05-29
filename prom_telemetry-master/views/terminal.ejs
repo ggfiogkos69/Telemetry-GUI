@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Telemetry Main</title>
+    <meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel = "stylesheet" href = "/main.css">
+    <link rel = "stylesheet" href = "/floatingchat.css">
+    <link rel = "stylesheet" href = "/rightcont.css">
+    <link rel = "stylesheet" href = "/header.css">
+    <link rel = "stylesheet" href = "/middlecont.css">
+    <link rel = "stylesheet" href = "/sidebar.css">
+    <link rel = "stylesheet" href = "/leftcont.css">
+    <link rel = "stylesheet" href = "/terminal.css">
+
+<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+
+        <script src = "/socket.io/socket.io.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js'></script>
+        <div class="sidebar">
+
+          <div class="navigation">
+              <a class="button home" href="/">
+                <img src="homepage.png">
+                <div class="logout">
+                      <button type = "submit" id="homepage"> Homepage </button>
+                </div>
+             </a>
+          </div>
+        <div class="navigation">
+            <a class="button term" href="/terminal">
+              <img src="terminal.png">
+              <div class="logout">
+                    <button type = "submit" id="terminal"> Terminal </button>
+              </div>
+           </a>
+        </div>
+
+
+        <div class="navigation">
+            <a class="button pers" href="/settings">
+              <img src="personalize.png">
+              <div class="logout">
+                    <button type = "submit"> Settings </button>
+              </div>
+           </a>
+        </div>
+
+
+        <div class="navigation">
+            <a class="button log" >
+                <img src="team_logo_embel.png">
+              <div class="logout">
+                <form action = "/logout?_method=DELETE" method = "POST">
+                    <button type = "submit"> Log Out </button>
+                </form>
+              </div>
+           </a>
+        </div>
+      </div>
+
+        <div class = "main-container">
+        <!-- chat -->
+        <div class="floating-chat">
+          <i class="fa fa-comment" aria-hidden="true"></i>
+            <div class="chat">
+                <div class="header">
+                    <span class="title">
+                        Team Chat
+                    </span>
+                    <button>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+
+                </div>
+                <ul class="messages">
+
+                </ul>
+                <div class="footer">
+                    <div class="text-box" contenteditable="true" disabled="true"></div>
+                    <button id="sendMessage">send</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo" style="display:inline;">
+
+
+            <div class="content__container" >
+                <h1 class="content__container__text">
+                    PROM
+                </h1>
+
+                <ul class="content__container__list">
+                    <li class="content__container__list__item">racing</li>
+                    <li class="content__container__list__item" style="color:red;">telemetry</li>
+
+
+
+                </ul>
+                </div>
+        </div>
+        <!-- HEADER -->
+        <header class="block">
+        </header>
+
+
+        <div class="wrapper" id="wrapper">
+          <div class = "content-wrapper">
+          <div class="content-section">
+          <div class="apps-card" style="width:70% !important;" id="term">
+        <div class="app-card" style="width:180px !important; padding-bottom:0px !important;">
+        <ul>
+        <div class="content-section-title">rpm rl</div>
+
+        <li class="adobe-product" id="rpm_rl-cont"> <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+         <div class = "live" id="rpm_rl">56</div> <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+        </li>
+        </ul>
+        </div>
+      </div>
+      <div class="terminal" id="terminaldata"> </div>
+    </div>
+  </div>
+
+    </div>
+    <!-- include js files -->
+    <script>var exports = {};</script>
+
+    <script type="text/javascript" src="chat.js"></script>
+    <script type="text/javascript" src="data_dict.js"></script>
+    <script type="text/javascript" src="terminal_data.js"></script>
+
+
+    <script>
+
+
+
+    document.getElementById("homepage").onclick = function () {
+        location.href = "/index.ejs";
+    };
+    function add_item(name, id) {
+      document.getElementById("term").innerHTML += "<div class='app-card' style='width:180px !important; padding-bottom:0px !important;'><ul><div class='content-section-title'>"+name+"</div><li class='adobe-product' id='"+id+"-cont'><div class = 'live' id='"+id+"'>56</div></li></ul></div>";
+
+    }
+    socket.on('terminal', function(arg1 ) {
+      document.getElementById("terminaldata").innerHTML += "<p class='divided'>>> "+arg1+"</p>";
+    });
+    +function(){
+
+      for(let x in data_dict){
+        var name = String(x)
+        add_item(name, name)
+}
+      }();
+
+
+    </script>
+
+
+
+</body>
+</html>

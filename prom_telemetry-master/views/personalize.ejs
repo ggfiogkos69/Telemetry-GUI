@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Telemetry Main</title>
+    <meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel = "stylesheet" href = "/main.css">
+    <link rel = "stylesheet" href = "/floatingchat.css">
+    <link rel = "stylesheet" href = "/rightcont.css">
+    <link rel = "stylesheet" href = "/header.css">
+    <link rel = "stylesheet" href = "/middlecont.css">
+    <link rel = "stylesheet" href = "/sidebar.css">
+    <link rel = "stylesheet" href = "/leftcont.css">
+    <link rel = "stylesheet" href = "/rightcont.css">
+    <link rel = "stylesheet" href = "/header.css">
+    <link rel = "stylesheet" href = "/middlecont.css">
+    <link rel = "stylesheet" href = "/sidebar.css">
+    <link rel = "stylesheet" href = "/leftcont.css">
+    <link rel = "stylesheet" href = "/terminal.css">
+
+<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.dropdown-content {
+  display:none;
+
+  position:absolute;
+  left:25%;
+  top:30%;
+  width:375px;
+}
+
+</style>
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <body >
+        <script src = "/socket.io/socket.io.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js'></script>
+
+                <div class="sidebar">
+                  <div class="navigation">
+                      <a class="button home" href="/">
+                        <img src="homepage.png">
+                        <div class="logout">
+                              <button type = "submit"> Homepage </button>
+                        </div>
+                     </a>
+                  </div>
+
+
+                  <div class="navigation">
+                      <a class="button term" href="/terminal">
+                        <img src="terminal.png">
+                        <div class="logout">
+                              <button type = "submit" id="terminal"> Terminal </button>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="navigation">
+                      <a class="button pers" href="/settings">
+                        <img src="personalize.png">
+                        <div class="logout">
+                              <button type = "submit" > Settings </button>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="navigation">
+                      <a class="button log" >
+                          <img src="team_logo_embel.png">
+                        <div class="logout">
+                          <form action="/logout?_method=DELETE" method="POST">
+                              <button type = "submit"> Log Out </button>
+                          </form>
+                        </div>
+                     </a>
+                  </div>
+
+
+                </div>
+        <div class = "main-container">
+          <div class="floating-chat">
+            <i class="fa fa-comment" aria-hidden="true"></i>
+              <div class="chat">
+                  <div class="header">
+                      <span class="title">
+                          Team Chat
+                      </span>
+                      <button>
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                      </button>
+
+                  </div>
+                  <ul class="messages">
+
+                  </ul>
+                  <div class="footer">
+                      <div class="text-box" contenteditable="true" disabled="true"></div>
+                      <button id="sendMessage">send</button>
+                  </div>
+              </div>
+          </div>
+
+        <div class="logo">
+            <div class="content__container">
+                <h1 class="content__container__text">
+                    PROM
+                </h1>
+
+                <ul class="content__container__list">
+                    <li class="content__container__list__item">racing</li>
+                    <li class="content__container__list__item" style="color:red">telemetry</li>
+
+
+
+                </ul>
+                </div>
+        </div>
+        <!-- HEADER -->
+        <header class="block">
+            <ul class="header-menu horizontal-list" >
+
+                <li class="adobe-product" style="float:right; padding-right:20px;">
+
+                  <h2 class="titular"> <span class="live-icon red" id = "livedata"></span>
+Live Data Available</h2>
+
+                </li>
+
+
+
+
+
+
+            </ul>
+
+
+
+        </header>
+
+
+<div class="wrapper" id="wrapper" style="align-items: center; justify-items:center; display: flex; ">
+  <div id="main-data" class='left-container container' style = '  margin:0 auto; margin-right:0 auto; margin-left:0 auto; padding-top:10px;' >
+    <div class='sensor1-chart-block block clear' style = 'height:550px !important; margin:auto; ' id='add_to_me'>
+       <h2 class="titular" >Choose the data you want to view</h2>
+
+      <div class="content-section">
+      <div class="apps-card">
+
+
+  <div class="app-card" style="position: relative; width:80%; " >
+ <ul>
+   <li class="adobe-product" >
+    <div class="products">
+
+     Race
+   </div>
+
+  <button type="button"  onclick="dropdown()" style="position:absolute; float:right; left:70%; ">  <i class="fa fa-angle-down" aria-hidden="true" ></i></button>
+
+  <div class="dropdown-content "  id="drop-cont" style="display: none; position: absolute; top: 80%; left: 0%; width:100%; z-index:1000;">
+     <ul>
+      <li class="adobe-product" style="  background-color: #4B5464; border-radius:15px" >
+       <div class="products" >
+
+        FSG 2021
+       </div>
+
+
+      </li>
+      <li class="adobe-product" style="background-color: #4B5464;">
+       <div class="products" style="  background-color: #4B5464;">
+
+        Fs Czech 2021
+       </div>
+
+
+      </li>
+      <li class="adobe-product" style="background-color: #4B5464;">
+       <div class="products" style="  background-color: #4B5464;">
+
+        Testing 20/06/21
+       </div>
+
+
+      </li>
+      <li class="adobe-product"style="background-color: #4B5464; border-radius:15px;" >
+       <div class="products" style="  background-color: #4B5464;">
+
+        Fs East 2021
+       </div>
+
+
+      </li>
+
+     </ul>
+
+  </div>
+
+
+
+   </li>
+
+</ul>
+</div>
+
+
+
+</div>
+
+
+</div>
+<h2 class="titular"style="padding-top:10px;" >Stream new Data</h2>
+<div class="wrapper" style="align-items: center; justify-items:center; display: grid; ">
+  <div style="padding-top:10px;"><h2 style="padding-right:10px; display: inline; ">Enter port :</h2><input type="text" style="border-radius:15px; height:50px;" placeholder="ex ttyUSB0" id="port"></input>
+</div>
+  <div style="padding-top:10px;"> <h2 style=" padding-right:10px; display: inline;">Enter baud rate: :</h2><input type="text" style="border-radius:15px; height:50px;" placeholder="ex 9600" id="baudrate"></input>
+</div>
+<div style="padding-top:10px;"><h2 style="padding-right:10px; display: inline;">Enter race name:</h2><input type="text" style="border-radius:15px; height:50px;" placeholder="..." id="race"></input>
+</div>
+<div class = "content-wrapper" >
+<div class="content-section">
+  <div class="apps-card" id="stop_record_bl" style="display: none; align-items: center; justify-content: center;">
+
+  <div class="app-card" id="stop_record" style="width:250px; align-items: center; justify-content: center;">
+  <ul style=" background:red;">
+   <li class="adobe-product" >
+    <div class="products" >
+  <a  onclick="stop_recording()"  >
+     Stop Recording
+   </a>
+   </div>
+  </li>
+
+  </ul>
+  </div>
+  </div>
+<div class="apps-card" id="start_record_bl">
+
+<div class="app-card" style="width:250px;">
+<ul>
+ <li class="adobe-product" >
+  <div class="products">
+<a id="start_record" onclick="start_recording()">
+   Start Recording
+ </a>
+ </div>
+</li>
+
+</ul>
+</div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+
+   </div>
+ </div>
+            </div>
+
+    </div>
+
+    <!-- include js files -->
+    <script>var exports = {};</script>
+    <script type="text/javascript" src="chat.js"></script>
+    <script type="text/javascript" src="chartright.js"></script>
+    <script type="text/javascript" src="chartbottom.js"></script>
+    <script type="text/javascript" src="updatechart.js"></script>
+    <script type="text/javascript" src="tracker.js"></script>
+    <script type="text/javascript" src="data_dict.js"></script>
+    <script type="text/javascript" src="terminal_data.js"></script>
+    <script src = "/socket.io/socket.io.js"></script>
+
+    <script>
+    var socket = io.connect();
+function start_recording(){
+  console.log("STARTINGG")
+
+fetch('/busy').then(response =>{
+  console.log(response.status)
+  if(response.status == 200) {
+    console.log("not busy")
+    var port = $("#port").val();
+    var baudrate= $("#baudrate").val();
+    socket.emit('recording', 'ddd')
+  //  $("#port").prop('disabled', true)
+  document.getElementById("stop_record_bl").style.display = "grid";
+
+  document.getElementById("start_record_bl").style.display = "none";
+
+
+    fetch('/logging?port='+port.toString()+'&baudrate='+baudrate.toString())
+
+  }
+  else {
+    console.log("busy")
+
+  }
+})
+}
+
+function stop_recording(){
+  fetch('/stop')
+  document.getElementById("start_record_bl").style.display = "grid";
+  document.getElementById("stop_record_bl").style.display = "none";
+
+}
+    function dropdown() {
+        if(document.getElementById("drop-cont").style.display == "block")
+          document.getElementById("drop-cont").style.display = "none";
+          else document.getElementById("drop-cont").style.display = "block";
+    }
+
+socket.on('recording', function() {
+  console.log("someone is recording")
+  $("#port").prop('disabled', true)
+})
+    </script>
+
+    </body>
+    <!-- partial -->
+
+</body>
+</html>

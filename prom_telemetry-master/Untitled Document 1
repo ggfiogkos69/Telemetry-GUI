@@ -1,0 +1,8 @@
+{"result": {"channel" : "1/plugin/testdata/random-20Hz-stream", "data":{"data":{"data":{"values":[[4454],[544],[5564],[5467]]}}}}}
+
+
+
+diskio,host=smar,name=loop26 merged_reads=0i,merged_writes=0i,reads=308i,writes=0i,write_bytes=0i,write_time=0i,iops_in_progress=0i,read_bytes=1684480i,read_time=34i,io_time=76i,weighted_io_time=34i 1642266143000000000
+
+
+cpu,cpu=cpu5,host=smar usage_idle=82.17821782172511,usage_nice=0,usage_iowait=0,usage_steal=0,usage_user=13.861386138623223,usage_system=3.960396039606635,usage_irq=0,usage_softirq=0,usage_guest=0,usage_guest_nice=0 1642266143000000000

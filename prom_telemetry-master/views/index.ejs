@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Telemetry Main</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel = "stylesheet" href = "/main.css">
+    <link rel = "stylesheet" href = "/floatingchat.css">
+    <link rel = "stylesheet" href = "/rightcont.css">
+    <link rel = "stylesheet" href = "/header.css">
+    <link rel = "stylesheet" href = "/middlecont.css">
+    <link rel = "stylesheet" href = "/sidebar.css">
+    <link rel = "stylesheet" href = "/leftcont.css">
+    <link rel = "stylesheet" href = "/rightcont.css">
+    <link rel = "stylesheet" href = "/header.css">
+    <link rel = "stylesheet" href = "/middlecont.css">
+    <link rel = "stylesheet" href = "/sidebar.css">
+    <link rel = "stylesheet" href = "/leftcont.css">
+    <link rel = "stylesheet" href = "/terminal.css">
+<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <body >
+        <script src = "/socket.io/socket.io.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js'></script>
+        <div class="sidebar">
+          <div class="navigation">
+              <a class="button home" href="/">
+                <img src="homepage.png">
+                <div class="logout">
+                      <button type = "submit"> Homepage </button>
+                </div>
+             </a>
+          </div>
+
+
+          <div class="navigation">
+              <a class="button term" href="/terminal">
+                <img src="terminal.png">
+                <div class="logout">
+                      <button type = "submit" id="terminal"> Terminal </button>
+                </div>
+             </a>
+          </div>
+          <div class="navigation">
+              <a class="button pers" href="/settings">
+                <img src="personalize.png">
+                <div class="logout">
+                      <button type = "submit" > Settings </button>
+                </div>
+             </a>
+          </div>
+          <div class="navigation">
+              <a class="button log" >
+                  <img src="team_logo_embel.png">
+                <div class="logout">
+                  <form action="/logout?_method=DELETE" method="POST">
+                      <button type = "submit"> Log Out </button>
+                  </form>
+                </div>
+             </a>
+          </div>
+          <div class="right-container container2" id="tracker-sm" style="padding-top: 30px;float: left;width: 70% !important;display:block;z-index:9;">
+              <div class="value-chart block clear" style="align-items: center; justify-content: center;" >
+                <button type="button"  onclick="exptracker()" style=" padding-left:0px !important;">  <i class="fa fa-angle-right fa-2x" style="z-index:3; color: white;  padding-top:10px; width:30px; float:left; "></i></button>
+                <h2 style="writing-mode:sideways-lr; text-orientation:sideways-right; padding-top: 20px; "> TRACKER</h2>
+
+
+              </div>
+          </div>
+          <div class="right-container container2" id="tracker-exp" style="position:relative; padding-top: 30px;float: left;width: 500px !important; z-index:1000; display: none; ">
+              <div class="value-chart block clear" >
+                  <h2 class="titular" style="position:relative; left:30%; padding-bottom: 10px; display:inline; align:center;">TRACKER</h2>
+                  <span class="tracker live-icon " id = "TRACKER"></span>  <button type="button" class="nohighlight"  onclick="redtracker()" >   <i class="fa fa-angle-left fa-2x" style="z-index:10; color: white; float:right;  padding-right: 20px; padding-top:10px; width:30px;"></i></button>
+                    <br>
+
+
+
+                      <div class="field" >
+                          <canvas id = "gps" width = "450px" height = "250px">
+                          </canvas>
+                      </div>
+              </div>
+          </div>
+        </div>
+<div class = "main-container">
+  <div class="floating-chat">
+    <i class="fa fa-comment" aria-hidden="true"></i>
+      <div class="chat">
+          <div class="header">
+              <span class="title">
+                  Team Chat
+              </span>
+              <button>
+                  <i class="fa fa-times" aria-hidden="true"></i>
+              </button>
+
+          </div>
+          <ul class="messages">
+
+          </ul>
+          <div class="footer">
+              <div class="text-box" contenteditable="true" disabled="true"></div>
+              <button id="sendMessage">send</button>
+          </div>
+      </div>
+  </div>
+
+<div class="logo">
+    <div class="content__container">
+        <h1 class="content__container__text">
+            PROM
+        </h1>
+
+        <ul class="content__container__list">
+            <li class="content__container__list__item">racing</li>
+            <li class="content__container__list__item" style="color:red">telemetry</li>
+
+
+
+        </ul>
+        </div>
+</div>
+<!-- HEADER -->
+<header class="block">
+    <ul class="header-menu horizontal-list">
+      <li>
+          <button id="addcont" onclick="open_bottomcont()">Choose Your Data</button>
+      </li>
+      <li class="adobe-product" style="float:right; padding-right:20px;">
+
+        <h2 class="titular"> <span class="live-icon red" id = "livedata"></span>
+Live data not available</h2>
+
+      </li>
+        <li style="padding-left:30px;  float: right; ">
+             <button ><div id = "Time"></div></button>
+        </li>
+
+
+        <li>
+
+        </li>
+
+    </ul>
+
+
+</header>
+
+
+`<div class="wrapper" id="wrapper">
+       <!-- LEFT-CONTAINER - DONUT CHART -->
+       <div id="main-data" class='left-container container'>
+         <div class='sensor1-chart-block block clear' style = 'position:relative;' id='add_to_me'>
+            <h2 class="titular">Main Data</h2>
+
+           <div class = "content-wrapper">
+           <div class="content-section">
+           <div class="apps-card">
+             <div class="app-card" style="width:20% !important;">
+            <ul>
+             <div class="content-section-title">VDC</div>
+
+             <li class="adobe-product" id="VDC-cont"> <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+              <div class = "live" id="VDC">56</div> <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+            </li>
+          </ul>
+        </div>
+        <div class="app-card" style="width:20% !important;">
+       <ul>
+        <div class="content-section-title">Vout</div>
+
+        <li class="adobe-product" id="vout-cont"> <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+         <div class = "live" id="vout">56</div> <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+       </li>
+     </ul>
+   </div>
+   <div class="app-card" style="width:20% !important;">
+  <ul>
+   <div class="content-section-title">rpm rr</div>
+
+   <li class="adobe-product" id="rpm_rr-cont"> <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+    <div class = "live" id="rpm_rr">56</div> <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+  </li>
+</ul>
+</div>
+<div class="app-card" style="width:20% !important; margin-top: 0px !important;">
+<ul>
+<div class="content-section-title">rpm rl</div>
+
+<li class="adobe-product" id="rpm_rl-cont"> <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+ <div class = "live" id="rpm_rl">56</div> <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+</li>
+</ul>
+</div>
+      </div>
+      <img src="/modifiedtire.png" style="margin-left: 10px; margin-top:10px; background-color:red; width:180px; height:200px; display:inline;">
+      <iframe src="http://localhost:3000/d-solo/WU_FjM8nz/prom?orgId=1&from=1652739900660&to=1652740200660&theme=dark&panelId=24&output=embed" width="180" height="180" frameborder="0"></iframe>
+      <img src="/motormodified.png" style="background-color:red;display:inline; float:right; margin-top:10px; margin-left:5px;  width:150px; height:150px;">
+
+</div>
+
+</div>
+
+        </div>
+
+
+      </div>
+
+    <!-- MIDDLE-CONTAINER - SIGNAL STATE -->
+    <div class="MIDDLE-container container">
+      <div class="BINARY-chart-block block2 clear">
+
+
+      <div class = "content-wrapper">
+      <div class="content-section">
+
+      <div class="apps-card">
+        <div class="app-card">
+       <ul>
+        <div class="content-section-title">Shutdown</div>
+
+        <li class="adobe-product"> <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+         <div class="products">
+
+          IMD
+         </div>
+         <div class = "live"><span class="live-icon red" id = "IMD"></span></div> <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+
+
+        </li>
+        <li class="adobe-product">
+         <div class="products">
+
+          BSPD
+         </div>
+
+         <div class = "live"><span class="live-icon red" id = "BSPD"></span></div>
+
+
+        </li>
+        <li class="adobe-product">
+          <div class="products">
+
+           AMS
+          </div>
+
+          <div class = "live"><span class="live-icon red" id = "AMS"></span></div>
+
+
+         </li>
+         <li class="adobe-product">
+          <div class="products">
+
+           AIR-
+          </div>
+
+          <div class = "live"><span class="live-icon red" id = "AIRminus"></span></div>
+
+
+         </li>
+         <li class="adobe-product">
+          <div class="products">
+
+           AIR+
+          </div>
+
+          <div class = "live"><span class="live-icon red" id = "AIRplus"></span></div>
+
+
+         </li>
+       </ul>
+       </div>
+       <div class="app-card">
+        <ul>
+          <div class="content-section-title2">Date</div>
+
+
+
+         <li class="adobe-product">
+          <div class="products2" id = "Date">
+
+          </div>
+
+         </li>
+         <div class="content-section-title2">Time Elapsed</div>
+
+         <li class="adobe-product">
+          <div class="products2" >
+
+          </div>
+        </li>
+          <div class="content-section-title2">Race</div>
+
+          <li class="adobe-product">
+           <div class="products2" id = "Race">Endurance
+           </div>
+         </li>
+        </ul>
+        </div>
+       <div class="app-card">
+        <ul>
+          <div class="content-section-title">Status</div>
+         <li class="adobe-product">
+          <div class="products">
+
+           A/A
+          </div>
+          <div class = "live"><span class="live-icon red" id = "A/A"></span></div>
+
+
+         </li>
+         <li class="adobe-product">
+          <div class="products">
+
+           RTD
+          </div>
+          <div class = "live"><span class="live-icon red" id = "RTD"></span></div>
+
+
+         </li>
+         <li class="adobe-product">
+          <div class="products">
+
+           SBSPD
+          </div>
+          <div class = "live"><span class="live-icon red" id = "SBSPD"></span></div>
+
+
+         </li>
+         <li class="adobe-product">
+          <div class="products">
+
+           InvEn
+          </div>
+          <div class = "live"><span class="live-icon red" id = "InvEn"></span></div>
+
+
+         </li>
+         <li class="adobe-product">
+          <div class="products">
+
+           DRS
+          </div>
+
+          <div class = "live"><span class="live-icon red" id = "DRS"></span></div>
+
+
+         </li>
+        </ul>
+        </div>
+
+      </div>
+      </div>
+      </div>
+       </div>
+    </div>
+    <div class="left-container container">
+        <div class="sensor1-chart-block block clear" style = "position:relative;" id="change">
+
+          <!--  <h2 class="titular">Voltage</h2> -->
+            <button class = "time_picker" style="float: left" id="currange" onclick="openForm()">Time: from now-5m to now</button>
+            <button class="btn" onclick="fullscreen()" style=" float: right; z-index : 3; background-color:none; color:white;"><i class="fa fa-expand" style="z-index:3; color: white;"></i></button>
+
+            <div class="form-popup" style="position:absolute; z-index:4; top : 40px; left: 1px; " id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <div class="text"> From </div>
+                <input type="time"  id="from"  step="2" required >
+                <div class="text"> To </div>
+                <input type="time"  id="to"  step="2" required >
+
+                <button type="button" class="time_picker" onclick="saveForm()" style="display:inline">Save</button>
+                <button type="button" class="time_picker" onclick="closeForm()" style="display:inline; float:right">Close</button>
+
+              </form>
+            </div>
+            <div id="livegraph" >
+            <!--  <iframe src="https://benetousmaragda.grafana.net/d-solo/eWYDl397k/prom?orgId=1&from=now-5m&to=now&theme=dark&panelId=22&output=embed"  id="chart-left" allowfullscreen = "true" frameBorder="0" width="100%" height="300"  style=" overflow-x: hidden; background-color: green; border: none; overflow: hidden; margin:0px !important; padding: 0px !important;"  frameborder="0"></iframe>-->
+            <!--  <iframe src="http://52.59.203.14:3000/d-solo/WU_FjM8nz/prom?orgId=1&from=now-5m&to=now&theme=dark&panelId=22"    id="chart-left" allowfullscreen = "true" frameBorder="0" width="100%" height="300"  style=" overflow-x: hidden; background-color: green; border: none; overflow: hidden; margin:0px !important; padding: 0px !important;"  frameborder="0"></iframe>-->
+        <iframe src="http://localhost:3000/d-solo/WU_FjM8nz/prom?orgId=1&from=now-5m&to=now&theme=dark&panelId=22"  id="chart-left" allowfullscreen = "true" frameBorder="0" width="100%" height="300"  style=" overflow-x: hidden; background-color: green; border: none; overflow: hidden; margin:0px !important; padding: 0px !important;"  frameborder="0"></iframe>    
+
+
+          </div>
+
+            <script>
+
+            function start_logging() {
+              console.log("starting...")
+              fetch('/logging');
+            }
+            function fullscreen() {
+                  var elem = document.getElementById("chart-left");
+                  elem.requestFullscreen();
+            }
+            function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+            function saveForm() {
+                  var from = document.getElementById("from").value;
+                  var to = document.getElementById("to").value;
+                  console.log(from)
+                  var hour = from.split(":")[0]
+                  var min = from.split(":")[1]
+                  var sec = from.split(":")[2]
+                  var d = new Date(2022, 4, 11, hour,min,sec,0);
+                  var fromunix = Math.round(d/ 1000).toString()
+                  hour = to.split(":")[0]
+                  min = to.split(":")[1]
+                  sec = to.split(":")[2]
+                  d = new Date(2022, 4, 11, hour,min,sec,0);
+                  var tounix = Math.round(d/ 1000).toString()
+                //  document.getElementById("livegraph").style.display = "none";
+
+                  document.getElementById("myForm").style.display = "none";
+                  from = "Range from " + from + " to " + to
+                  $("#currange").text(from);
+                  var id = String(data_dict["rpm_rr"]+2);
+                  $("#livegraph").html(  "<iframe src='http://localhost:3000/d-solo/DP6E_Cx7z/influxd?orgId=1&from="+fromunix+"000"+"&to="+tounix+"000"+"&theme=dark&panelId="+id+"' width='570' height='300'  allowfullscreen = 'true' id='chart-left' frameborder='0'></iframe>");
+            }
+            </script>
+    </div>
+    </div>
+
+
+
+  <!--   BOTTOM-CONTAINER
+    <div class = "left-container container">
+        <div class="sensor2-chart-block block clear">
+            <h2 class="titular">INPUT #3</h2>
+            <div class="sensor2-chart">
+                <canvas  width="1430" height="290" id="line2-chart" ></canvas>
+            </div>
+        </div>
+    </div>-->
+</div>
+
+            <div class="addcont-cont"  id="addcontainer">
+              <button class="btn" onclick="close_bottomcont()" style=" float: right; z-index : 4; background-color:none; color:white;"><i class="fa fa-close" style="z-index:3; color: white;"></i></button>
+
+              <div class="wrap" id ="choose_cont">
+            </div>
+            </div>
+
+    </div>
+    <!-- include js files -->
+    <script>var exports = {};</script>
+    <script type="text/javascript" src="chat.js"></script>
+    <script type="text/javascript" src="chartright.js"></script>
+    <script type="text/javascript" src="chartbottom.js"></script>
+    <script type="text/javascript" src="updatechart.js"></script>
+    <script type="text/javascript" src="tracker.js"></script>
+    <script type="text/javascript" src="data_dict.js"></script>
+    <script type="text/javascript" src="terminal_data.js"></script>
+
+    <script>
+
+
+function start_logging() {
+  console.log("starting...")
+  fetch('/logging');
+}
+function exptracker() {
+    document.getElementById("tracker-sm").style.display = "none";
+    document.getElementById("tracker-exp").style.display = "block";
+}
+function redtracker() {
+    document.getElementById("tracker-sm").style.display = "block";
+    document.getElementById("tracker-exp").style.display = "none";
+}
+
+
+
+    +function(){
+
+      for(let x in data_dict){
+        var num = String(data_dict[x])
+        var name = String(x)
+        var button = "<button class='data-type choose' id='id-"+num +"'>"+name+"</button>";
+        document.getElementById("choose_cont").innerHTML += button;
+
+      }
+      const elements = document.querySelectorAll('.choose');
+      elements.forEach(element =>{
+        element.addEventListener('click', (e)=>{
+          var el = e.target;
+          if(el.classList.contains("border")) {
+            console.log("out")
+            console.log(el.id.split("-")[1]);
+            el.classList.remove("border");
+            var id = parseInt(el.id.split("-")[1])*2
+            var elem = document.getElementById(id.toString());
+            elem.classList.add("dis");
+
+          }
+          else {
+
+            el.classList.add("border");
+            console.log("here")
+            var id = el.id.split("-")[1]
+            var id = parseInt(el.id.split("-")[1])*2
+
+            console.log(id)
+            console.log(!!document.getElementById(id.toString()))
+            if (!!document.getElementById(id.toString())) {
+              var el = document.getElementById(id.toString())
+              el.classList.remove("dis")
+            }
+            else{
+              addCode(el.id.split("-")[1]);
+            }
+          }
+
+        })
+      })
+
+    }();
+    var today = new Date()
+    var dd = String(today.getDate()).padStart(2,'0')
+    var mm = String(today.getMonth()+1).padStart(2,'0')
+    var yyy = today.getFullYear()
+    today = dd + '/' + mm + '/' + yyy
+    var content = document.getElementById("Date")
+    var text = document.createTextNode(today)
+    content.appendChild(text)
+    function time () {
+
+      var today2 = new Date()
+      var time = today2.getHours()+ ':' + today2.getMinutes() +':' + today2.getSeconds()
+
+
+      $('#curr').remove()
+      $('<div id="curr"></div>').appendTo("#Time")
+      $('#curr').append(time)
+
+    }
+
+
+    var clockrefresh = setInterval(time,1000)
+
+    //get data from server
+    socket.emit('new-user', 'name') //let server know that a new user signed in
+    socket.on('datastreamMES', function(arg1, arg2, arg3, arg4){ //when data arrive -event datastreamMES is the event the server creates when i passes on data- the charts have to be updated
+        updateChart(arg2, arg3, arg4); //arg1 was a simple text message, arg2/arg3/arg4 are for right top chart(0-100)/left top chart(0-200)/bottom chart (0-10000) respectively
+        //change the order of the variables through server console- when initiating server the question "do you want to change variable limits"
+        //is for this purpose
+    });
+
+socket.on('gpsdata', function(arg1 , arg2 , arg3) {
+  arrayx = arg1;
+  arrayy = arg2;
+  size = arg3;
+  updategps(arrayy, arrayx, size);
+  ready = true;
+
+});
+
+socket.on('livegpsdata', function(arg1 , arg2 ) {
+if(ready) {
+    console.log("ready")
+    updatelivegps(arg1, arg2);
+}
+});
+
+  function state(value1, value2){
+
+  }
+
+socket.on('state', function(arg1 , arg2 ) {
+if(ready) {
+    console.log("ready")
+    state(arg1, arg2);
+}
+});
+
+ 	var dt = Date.now() // or: new Date().getTime()
+  //var doc = Document.getElementById("Actual Speed")
+  var txt = dt.toString()
+//  doc.innerHTML = txt
+  //$("Actual Speed").update(txt)
+    </script>
+
+    </body>
+    <!-- partial -->
+
+</body>
+</html>
