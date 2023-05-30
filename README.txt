@@ -28,7 +28,7 @@ RUN THE APP (Do everytime):
  npm run devStart (This starts the GUI)
  you can access it on http://localhost:8000
  username:prom password:1234
- username:prom password:1234
+ 
 
 2.2) open cmd or PowerShell on the repo directory and run:
 2.2) open cmd or PowerShell on the repo directory and run:
