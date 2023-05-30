@@ -15,11 +15,14 @@ ON WINDOWS:
 5) open cmd or PowerShell on the repo directory and run:
  npm run devStart (This starts the GUI)
  you can access it on http://localhost:8000
+ username:prom password:1234
 
 6) open cmd or PowerShell on the repo directory and run:
  wsl (This switches cmd to Unix terminal)
  npm run grafana (This starts grafana)
  you can access it on http://localhost:3000
+ username:admin password:admin
+
 
 Hints:
 -> You can open a terminal on the repo directory by right clicking on the folder that contains the code
@@ -33,3 +36,4 @@ serialport -> package to access serialports. Specific version needed, that expla
 WSL -> Windows Linux Subsystem. Unix commands are required to start Grafana, bad dev work, don't ask why.
 Grafana -> app that handles data through InfluxDB and creates the required plots.
 InfluxDB -> Time series database that stores the Telemetry data.
+
