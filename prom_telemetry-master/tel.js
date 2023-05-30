@@ -53,17 +53,6 @@ let apiRequest = new XMLHttpRequest();
     console.log(response)
 
   }
-
- /*var request = $.ajax({
-   url: 'http://localhost:3000/api/live/push/custom_stream_id',
-   method: 'POST',
-   data: 'sma,host=smar '+datanew,
-   headers:{'Authorization':'Bearer '+ 'eyJrIjoiMm03c0lXRWY0VGxrM0Vmd2hBelN6NWdtQ3ZSMHZLMTAiLCJuIjoidGVsIiwiaWQiOjF9'},
-
- })
- request.done(function(msg){
-   console.log(msg)
- })*/
 }
 
 const results = []
@@ -96,6 +85,7 @@ var lineReader = createInterface({input: myPort})
                 if( isjson(mydata)){
                   serial_data = JSON.parse(mydata)
                   console.log("VDC: ", serial_data["vdc"])
+                  updateChart(90,0,0)
                   //parsetoinflux(serial_data)
                   for(var key in serial_data){
                     io.sockets.emit(key, serial_data[key])

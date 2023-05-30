@@ -3,16 +3,16 @@
     var point = 0;
     
     function updateChart(value1, value2, value3){ // value1 = right top chart(0-100), value2 = left top chart(0-200), value3 = bottom chart (0-10000) 
-
+        console.log("PANIKK")
         //here you can change the class of the signals in the middle container - ie change them from red to green or from green to red
-        /*var element1 = document.getElementById("tsal") 
+        var element1 = document.getElementById("IMD") 
         if(element1.className == "live-icon red") console.log("found")
         if(value1 > 80 && element1.className == "live-icon red") {
           element1.classList.remove("red");
           element1.classList.add("green");
           console.log("not here")
     
-         }*/
+         }
 
           chartInstance.data.labels.push(new Date());
           chartInstance.data.datasets.forEach((dataset) => {
