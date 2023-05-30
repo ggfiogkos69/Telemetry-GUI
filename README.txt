@@ -42,10 +42,6 @@ Hints:
 -> WSL is required for step 6 because Grafana does not seem to function properly on Windows.
 -> You can view the raw .json that is being streamed through the app terminal or the terminal that you used to start the app.
 -> JSON looks like: {"key1": value1, "key2" :value2}
--> You can open a terminal on the repo directory by right clicking on the folder that contains the code.
--> WSL is required for step 6 because Grafana does not seem to function properly on Windows.
--> You can view the raw .json that is being streamed through the app terminal or the terminal that you used to start the app.
--> JSON looks like: {"key1": value1, "key2" :value2}
 
 
 WHY AM I USING IT:
