@@ -18719,3 +18719,13 @@ t=2023-05-30T16:30:51+0300 lvl=info msg="Request Completed" logger=context userI
 t=2023-05-30T16:30:51+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
 t=2023-05-30T16:32:48+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=48 size=0 referer=
 t=2023-05-30T16:32:48+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=14 size=0 referer=
+t=2023-05-30T16:33:45+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-05-30T16:33:45+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-05-30T16:33:47+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-05-30T16:33:47+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-05-30T16:34:23+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-05-30T16:34:23+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=8 size=0 referer=
+t=2023-05-30T16:47:33+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=47 size=0 referer=
+t=2023-05-30T16:47:34+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-05-30T16:59:24+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=50 size=0 referer=
+t=2023-05-30T16:59:24+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
