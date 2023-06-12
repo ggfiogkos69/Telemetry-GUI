@@ -687,3 +687,15 @@ t=2023-06-12T16:12:50+0300 lvl=info msg="Request Completed" logger=context userI
 t=2023-06-12T16:12:50+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
 t=2023-06-12T16:12:50+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
 t=2023-06-12T16:12:50+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=13 size=0 referer=
+t=2023-06-12T16:12:54+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-12T16:12:54+0300 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2023-06-12T16:13:00+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=15 size=0 referer=
+t=2023-06-12T16:13:03+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/lib/monaco/min/vs/loader.js status=404 remote_addr=[::1] time_ms=31 size=30584 referer="http://localhost:3000/d/WU_FjM8nz/prom?orgId=1&editPanel=30"
+t=2023-06-12T16:35:52+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=44 size=0 referer=
+t=2023-06-12T16:35:52+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-12T17:14:04+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=20 size=0 referer=
+t=2023-06-12T17:14:04+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-12T17:25:44+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=33 size=0 referer=
+t=2023-06-12T17:25:44+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-12T17:25:49+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-12T17:26:02+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/lib/monaco/min/vs/loader.js status=404 remote_addr=[::1] time_ms=22 size=30588 referer="http://localhost:3000/d/WU_FjM8nz/prom?orgId=1&editPanel=30"

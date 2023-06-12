@@ -13,6 +13,7 @@ REQUIREMENTS (Do once):
  wsl --install 
 
 1.5) install ngrok: https://ngrok.com/download
+ Create an account, login, and connect it your ngrok installation.(Step 2 in ngrok account page) 
 
 RUN THE APP (Do everytime):
 2.1) open cmd or PowerShell on the repo directory and run:

@@ -12,10 +12,12 @@ function initialize(passport, getUserByUsername, getUserById){
         }
         try{
             if (os.platform() === 'win32') {
-                console.log('This machine is running Windows.');
-              } else {
-                console.log('This machine is not running Windows.');
+                console.log('Windows machine.');
               }
+            if (os.platform() === 'linux') {
+                console.log('Linux machine.');
+              } 
+                
             if(password == user.password){
                 console.log("user accepted")
 
