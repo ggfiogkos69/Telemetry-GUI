@@ -28,6 +28,7 @@ var createInterface = require('readline').createInterface;
 const arrayx = utm.arrayx;
 const arrayy = utm.arrayy;
 const size = utm.size;
+const os = require('os');
 
  var XMLHttpRequest = require('xhr2');
 function convertformat(data) {
@@ -107,10 +108,18 @@ function isjson(str) {
 io.on('connection', function(socket) {
 function start(port, baudrate) {
   mes = ""
+  if (os.platform() === 'win32') {
   var myPort = new serialport(port, {
       baudRate:baudrate,
       parser: new serialport.parsers.Readline('\r\n')
   });
+  }
+  if (os.platform() === 'linux') {
+    var myPort = new serialport('/dev/'+port, {
+        baudRate:baudrate,
+        parser: new serialport.parsers.Readline('\r\n')
+    });
+    }
   myPort.on('open', ()=>{
   console.log("port is open")
   });

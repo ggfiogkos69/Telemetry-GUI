@@ -1,3 +1,4 @@
+const os = require('os');
 const LocalStrategy = require('passport-local').Strategy// use passport's library function that uses basic usename name configuration
 
 function initialize(passport, getUserByUsername, getUserById){
@@ -10,6 +11,11 @@ function initialize(passport, getUserByUsername, getUserById){
             return done(null, false, {message: 'no user with than username'})
         }
         try{
+            if (os.platform() === 'win32') {
+                console.log('This machine is running Windows.');
+              } else {
+                console.log('This machine is not running Windows.');
+              }
             if(password == user.password){
                 console.log("user accepted")
 
