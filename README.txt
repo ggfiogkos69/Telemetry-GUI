@@ -28,7 +28,7 @@ RUN THE APP (Do everytime):
 
 2.3)(Optional) open the folder containing the project:
  click on ngrok.exe
- run ngrok http 8000 on the terminal that pops up (This creates a link to localhost:8000 to send to others)
+ run ngrok http 8000 on the terminal that pops up 	(This creates a link to localhost:8000 to send to others)
 
  HOW TO STREAM DATA (Always after 2.1, 2.2):
 3.1) Identify the COM port that is being used by the receiver (ex. with Device Manager).

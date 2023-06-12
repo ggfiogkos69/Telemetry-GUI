@@ -55,7 +55,7 @@ let apiRequest = new XMLHttpRequest();
   }
 }
 
-function updateChart(value1, value2, value3){ // value1 = right top chart(0-100), value2 = left top chart(0-200), value3 = bottom chart (0-10000) 
+/*function updateChart(value1, value2, value3){ // value1 = right top chart(0-100), value2 = left top chart(0-200), value3 = bottom chart (0-10000) 
         console.log("PANIKK")
         //here you can change the class of the signals in the middle container - ie change them from red to green or from green to red
         var element1 = document.getElementById("IMD") 
@@ -91,7 +91,7 @@ function updateChart(value1, value2, value3){ // value1 = right top chart(0-100)
           chartInstance.update(0);
           chartInstance2.update(0);
     
-      };   
+      };   */
      
 
 const results = []
@@ -124,7 +124,7 @@ var lineReader = createInterface({input: myPort})
                 if( isjson(mydata)){
                   serial_data = JSON.parse(mydata)
                   console.log("VDC: ", serial_data["vdc"])
-                  updateChart(90,0,0)
+                  //updateChart(90,0,0)
                   //parsetoinflux(serial_data)
                   for(var key in serial_data){
                     io.sockets.emit(key, serial_data[key])
