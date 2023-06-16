@@ -41,3 +41,15 @@ socket.on('rpm_rl', function(arg1 ) {
     $('#rpm_rl').append(arg1)
 
 });
+socket.on('bspd_status', function(arg1) {
+
+  //  console.log(arg1)
+    $('#BSPD').removeClass('red green')
+    console.log()
+    if (arg1 == 1) {
+      $('#BSPD').addClass(' green'); // Add the 'green' color class
+    } else {
+      $('#BSPD').addClass(' red'); // Add the 'red' color class
+    }
+
+});
