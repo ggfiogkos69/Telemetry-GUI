@@ -17,7 +17,7 @@ var data_dict = {
   "break_pressure_fron":16,
   "break_pressure_rear":17,
   "apps":18,
-  "requesed_torque":19,
+  "requested_torque":19,
   "actual_torque":20,
   "imd_status" : 21,
   "ams_status" : 22,
