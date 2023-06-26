@@ -2727,3 +2727,102 @@ t=2023-06-15T20:57:12+0300 lvl=info msg="Request Completed" logger=context userI
 t=2023-06-15T20:57:12+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=POST path=/api/live/push/custom_stream_id status=0 remote_addr=[::1] time_ms=10 size=0 referer=
 t=2023-06-15T20:57:12+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=POST path=/api/live/push/custom_stream_id status=0 remote_addr=[::1] time_ms=10 size=0 referer=
 t=2023-06-15T20:57:12+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=POST path=/api/live/push/custom_stream_id status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T16:54:14+0300 lvl=info msg="Starting Grafana" logger=server version=8.0.6 commit=68fe9e3431 branch=HEAD compiled=2021-07-15T10:49:19+0300
+t=2023-06-16T16:54:14+0300 lvl=info msg="Config loaded from" logger=settings file=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/defaults.ini
+t=2023-06-16T16:54:14+0300 lvl=info msg="Path Home" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master
+t=2023-06-16T16:54:14+0300 lvl=info msg="Path Data" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data
+t=2023-06-16T16:54:14+0300 lvl=info msg="Path Logs" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/log
+t=2023-06-16T16:54:14+0300 lvl=info msg="Path Plugins" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/plugins
+t=2023-06-16T16:54:14+0300 lvl=info msg="Path Provisioning" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/provisioning
+t=2023-06-16T16:54:14+0300 lvl=info msg="App mode production" logger=settings
+t=2023-06-16T16:54:14+0300 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2023-06-16T16:54:14+0300 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/grafana.db mode=-rwxrwxrwx expected=-rw-r-----
+t=2023-06-16T16:54:14+0300 lvl=info msg="Starting DB migrations" logger=migrator
+t=2023-06-16T16:54:14+0300 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=330 duration=603.346µs
+t=2023-06-16T16:54:14+0300 lvl=info msg="Starting plugin search" logger=plugins
+t=2023-06-16T16:54:18+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=input filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/input-datasource/module.js.LICENSE.txt
+t=2023-06-16T16:54:18+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=grafana-plugin-admin-app filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/plugin-admin-app/plugin.json
+t=2023-06-16T16:54:18+0300 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2023-06-16T16:54:18+0300 lvl=info msg="Registering plugin" logger=plugins id=grafana-plugin-admin-app
+t=2023-06-16T16:54:18+0300 lvl=info msg="Live Push Gateway initialization" logger=live.push_http
+t=2023-06-16T16:54:19+0300 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2023-06-16T16:54:20+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-06-16T16:54:20+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T16:54:22+0300 lvl=info msg="Initialized channel handler" logger=live channel=grafana/dashboard/uid/WU_FjM8nz address=grafana/dashboard/uid/WU_FjM8nz
+t=2023-06-16T16:54:22+0300 lvl=info msg="Initialized channel handler" logger=live channel=stream/custom_stream_id/sma address=stream/custom_stream_id/sma
+t=2023-06-16T16:54:25+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=13 size=0 referer=
+t=2023-06-16T16:54:25+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-06-16T16:57:36+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-06-16T16:58:26+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T16:58:27+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T16:58:27+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=14 size=0 referer=
+t=2023-06-16T17:05:46+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=17 size=0 referer=
+t=2023-06-16T17:05:46+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T17:05:46+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:05:46+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=13 size=0 referer=
+t=2023-06-16T17:06:44+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:06:44+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:07+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=20 size=0 referer=
+t=2023-06-16T17:07:07+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:07+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=13 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:08+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:09+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T17:07:09+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:10+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T17:07:10+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=7 size=0 referer=
+t=2023-06-16T17:07:10+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-06-16T17:07:10+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:10+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:11+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-06-16T17:07:27+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-16T17:07:27+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-06-22T17:41:29+0300 lvl=info msg="Starting Grafana" logger=server version=8.0.6 commit=68fe9e3431 branch=HEAD compiled=2021-07-15T10:49:19+0300
+t=2023-06-22T17:41:29+0300 lvl=info msg="Config loaded from" logger=settings file=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/defaults.ini
+t=2023-06-22T17:41:29+0300 lvl=info msg="Path Home" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master
+t=2023-06-22T17:41:29+0300 lvl=info msg="Path Data" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data
+t=2023-06-22T17:41:29+0300 lvl=info msg="Path Logs" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/log
+t=2023-06-22T17:41:29+0300 lvl=info msg="Path Plugins" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/plugins
+t=2023-06-22T17:41:29+0300 lvl=info msg="Path Provisioning" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/provisioning
+t=2023-06-22T17:41:29+0300 lvl=info msg="App mode production" logger=settings
+t=2023-06-22T17:41:29+0300 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2023-06-22T17:41:29+0300 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/grafana.db mode=-rwxrwxrwx expected=-rw-r-----
+t=2023-06-22T17:41:29+0300 lvl=info msg="Starting DB migrations" logger=migrator
+t=2023-06-22T17:41:29+0300 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=330 duration=411.124µs
+t=2023-06-22T17:41:29+0300 lvl=info msg="Starting plugin search" logger=plugins
+t=2023-06-22T17:41:32+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=input filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/input-datasource/README.md
+t=2023-06-22T17:41:32+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=grafana-plugin-admin-app filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/plugin-admin-app/CHANGELOG.md
+t=2023-06-22T17:41:32+0300 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2023-06-22T17:41:32+0300 lvl=info msg="Registering plugin" logger=plugins id=grafana-plugin-admin-app
+t=2023-06-22T17:41:32+0300 lvl=info msg="Live Push Gateway initialization" logger=live.push_http
+t=2023-06-22T17:41:32+0300 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2023-06-22T17:41:50+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:51+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:51+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=6 size=0 referer=
+t=2023-06-22T17:41:51+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:51+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:51+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:51+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:51+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:53+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:53+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=8 size=29 referer="http://localhost:3000/?orgId=1"
+t=2023-06-22T17:41:53+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:54+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:54+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=8 size=0 referer=
+t=2023-06-22T17:41:58+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-06-22T17:41:58+0300 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2023-06-22T17:42:00+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=15 size=0 referer=
+t=2023-06-22T17:42:02+0300 lvl=info msg="Initialized channel handler" logger=live channel=grafana/dashboard/uid/WU_FjM8nz address=grafana/dashboard/uid/WU_FjM8nz
+t=2023-06-22T17:42:02+0300 lvl=info msg="Initialized channel handler" logger=live channel=stream/custom_stream_id/sma address=stream/custom_stream_id/sma
