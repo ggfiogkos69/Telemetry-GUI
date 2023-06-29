@@ -4,17 +4,17 @@ var socket = io.connect(); //create a socket
 socket.on('min_cell_voltage', function(arg1 ) {
 
   //  console.log(arg1)
-    $('#lv_min_cell_voltage').remove()
-    $('<div id="lv_min_cell_voltage"></div>').appendTo("#MCV-cont")
-    $('#lv_min_cell_voltage').append(arg1)
+    $('#min_cell_voltage').remove()
+    $('<div id="min_cell_voltage"></div>').appendTo("#MCV-cont")
+    $('#min_cell_voltage').append(arg1)
 
 });
 socket.on('max_cell_temp', function(arg1 ) {
 
   //  console.log(arg1)
-    $('#lv_max_cell_temp').remove()
-    $('<div id="lv_max_cell_temp"></div>').appendTo("#mct-cont")
-    $('#lv_max_cell_temp').append(arg1)
+    $('#max_cell_temp').remove()
+    $('<div id="max_cell_temp"></div>').appendTo("#mct-cont")
+    $('#max_cell_temp').append(arg1)
 
 });
 socket.on('igbt_temp', function(arg1 ) {
@@ -113,7 +113,8 @@ socket.on('ts_off', function(arg1) {
     $('#ts_off').removeClass('red green')
     console.log()
     if (arg1 == 1) {
-      ts_off    } else {
+      $('#ts_off').addClass(' green'); // Add the 'green' color class
+    } else {
       $('#ts_off').addClass(' red'); // Add the 'red' color class
     }
 
@@ -197,15 +198,15 @@ socket.on('inv_enable', function(arg1) {
 
 });
 
-socket.on('>60v_dc_link', function(arg1) {
+socket.on('60v_dc_link', function(arg1) {
 
   //  console.log(arg1)
-    $('#>60v_dc_link').removeClass('red green')
+    $('#60v_dc_link').removeClass('red green')
     console.log()
     if (arg1 == 1) {
-      $('#>60v_dc_link').addClass(' green'); // Add the 'green' color class
+      $('#60v_dc_link').addClass(' green'); // Add the 'green' color class
     } else {
-      $('#>60v_dc_link').addClass(' red'); // Add the 'red' color class
+      $('#60v_dc_link').addClass(' red'); // Add the 'red' color class
     }
 
 });
@@ -252,12 +253,12 @@ socket.on('air_plus_state', function(arg1) {
 socket.on('air_plus_supply', function(arg1) {
 
   //  console.log(arg1)
-    $('#air_plus_state').removeClass('red green')
+    $('#air_plus_supply').removeClass('red green')
     console.log()
     if (arg1 == 1) {
-      $('#air_plus_state').addClass(' green'); // Add the 'green' color class
+      $('#air_plus_supply').addClass(' green'); // Add the 'green' color class
     } else {
-      $('#air_plus_state').addClass(' red'); // Add the 'red' color class
+      $('#air_plus_supply').addClass(' red'); // Add the 'red' color class
     }
 
 });
@@ -301,15 +302,15 @@ socket.on('bots_sd', function(arg1) {
 
 });
 
-socket.on('inertia_sd', function(arg1) {
+socket.on('inertial_sd', function(arg1) {
 
   //  console.log(arg1)
-    $('#inertia_sd').removeClass('red green')
+    $('#inertial_sd').removeClass('red green')
     console.log()
     if (arg1 == 1) {
-      $('#inertia_sd').addClass(' green'); // Add the 'green' color class
+      $('#inertial_sd').addClass(' green'); // Add the 'green' color class
     } else {
-      $('#inertia_sd').addClass(' red'); // Add the 'red' color class
+      $('#inertial_sd').addClass(' red'); // Add the 'red' color class
     }
 
 });
@@ -426,9 +427,9 @@ socket.on('tsac', function(arg1) {
   $('#avi_error').removeClass('red green'); 
   $('#air_minus_stuck').removeClass('red green');  
   $('#air_plus_stuck').removeClass('red green');
-  $('#air_minus_impausability').removeClass('red green');  
-  $('#air_plus_implausability').removeClass('red green');
-  $('#pc_relay_implausability').removeClass('red green');
+  $('#air_minus_implausibility').removeClass('red green');  
+  $('#air_plus_implausibility').removeClass('red green');
+  $('#pc_relay_implausibility').removeClass('red green');
   $('#pc_circuit_error').removeClass('red green');
   $('#dcdc_overtemp').removeClass('red green');
   $('#elcon_hardware_failure').removeClass('red green');
@@ -454,13 +455,13 @@ socket.on('tsac', function(arg1) {
       $('#air_plus_stuck').addClass(' green');
       break;
     case 5:  
-      $('#air_minus_implausability').addClass(' green');
+      $('#air_minus_implausibility').addClass(' green');
       break;
     case 6:
-      $('#air_plus_implausability').addClass(' green');
+      $('#air_plus_implausibility').addClass(' green');
       break;
     case 7:  
-      $('#pc_relay_implausability').addClass(' green');
+      $('#pc_relay_implausibility').addClass(' green');
       break;
     case 8:
       $('#pc_circuit_error').addClass(' green');
@@ -499,14 +500,14 @@ socket.on('tsac', function(arg1) {
   if(!$('#air_plus_stuck').contains('live-icon green')){
     $('#air_plus_stuck').addClass('red');
   }
-  if(!$('#air_plus_implausability').contains('live-icon green')){
-    $('#air_plus_implausability').addClass('red');
+  if(!$('#air_plus_implausibility').contains('live-icon green')){
+    $('#air_plus_implausibility').addClass('red');
   }
-  if(!$('#air_minus_implausability').contains('live-icon green')){
-    $('#air_minus_implausability').addClass('red');
+  if(!$('#air_minus_implausibility').contains('live-icon green')){
+    $('#air_minus_implausibility').addClass('red');
   }
-  if(!$('#pc_relay_implausability').contains('live-icon green')){
-    $('#pc_relay_implausability').addClass('red');
+  if(!$('#pc_relay_implausibility').contains('live-icon green')){
+    $('#pc_relay_implausibility').addClass('red');
   }
   if(!$('#pc_circuit_error').contains('live-icon green')){
     $('#pc_circuit_error').addClass('red');
