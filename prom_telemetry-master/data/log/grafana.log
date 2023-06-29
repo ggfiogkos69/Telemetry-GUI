@@ -8728,3 +8728,4 @@ t=2023-06-29T18:04:35+0300 lvl=info msg="Request Completed" logger=context userI
 t=2023-06-29T18:04:56+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=21 size=0 referer=
 t=2023-06-29T18:05:25+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=14 size=0 referer=
 t=2023-06-29T18:05:25+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=15 size=0 referer=
+t=2023-06-29T18:09:33+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=64 size=0 referer=
