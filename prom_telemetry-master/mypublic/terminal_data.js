@@ -5,7 +5,7 @@ socket.on('min_cell_voltage', function(arg1 ) {
 
   //  console.log(arg1)
     $('#min_cell_voltage').remove()
-    $('<div id="min_cell_voltage"></div>').appendTo("#MCV-cont")
+    $('<div id="min_cell_voltage"></div>').appendTo("#min_cell_voltage-cont")
     $('#min_cell_voltage').append(arg1)
 
 });
@@ -13,7 +13,7 @@ socket.on('max_cell_temp', function(arg1 ) {
 
   //  console.log(arg1)
     $('#max_cell_temp').remove()
-    $('<div id="max_cell_temp"></div>').appendTo("#mct-cont")
+    $('<div id="max_cell_temp"></div>').appendTo("#max_cell_temp-cont")
     $('#max_cell_temp').append(arg1)
 
 });
@@ -21,7 +21,7 @@ socket.on('igbt_temp', function(arg1 ) {
 
   //  console.log(arg1)
     $('#igbt_temp').remove()
-    $('<div id="igbt_temp"></div>').appendTo("#it-cont")
+    $('<div id="igbt_temp"></div>').appendTo("#igbt_temp-cont")
     $('#igbt_temp').append(arg1)
 
 });
@@ -29,7 +29,7 @@ socket.on('motor_temp', function(arg1 ) {
 
   //  console.log(arg1)
     $('#motor_temp').remove()
-    $('<div id="motor_temp"></div>').appendTo("#mt-cont")
+    $('<div id="motor_temp"></div>').appendTo("#motor_temp-cont")
     $('#motor_temp').append(arg1)
 
 });

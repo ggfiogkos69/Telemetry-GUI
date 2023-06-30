@@ -369,13 +369,13 @@ left: 10;
 }
 .data-type {
   background-color: #181B1F80;
-float:left;
-margin:5px;
-text-align: center;
+  float:left;
+  margin:5px;
+  text-align: center;
   color: white;
   padding: 3px 3px;
   cursor: pointer;
-  width: 120px;
+  width: 176px;
   border-radius: 10px;
   opacity: 0.8;
   border: 1px solid transparent;
