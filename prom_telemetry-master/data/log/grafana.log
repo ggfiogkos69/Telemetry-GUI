@@ -2732,3 +2732,75 @@ t=2023-07-01T18:59:48+0300 lvl=info msg="Request Completed" logger=context userI
 t=2023-07-01T18:59:48+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
 t=2023-07-01T18:59:48+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=8 size=0 referer=
 t=2023-07-01T18:59:48+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-07-03T15:40:25+0300 lvl=info msg="Starting Grafana" logger=server version=8.0.6 commit=68fe9e3431 branch=HEAD compiled=2021-07-15T10:49:19+0300
+t=2023-07-03T15:40:25+0300 lvl=info msg="Config loaded from" logger=settings file=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/defaults.ini
+t=2023-07-03T15:40:25+0300 lvl=info msg="Path Home" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master
+t=2023-07-03T15:40:25+0300 lvl=info msg="Path Data" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data
+t=2023-07-03T15:40:25+0300 lvl=info msg="Path Logs" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/log
+t=2023-07-03T15:40:25+0300 lvl=info msg="Path Plugins" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/plugins
+t=2023-07-03T15:40:25+0300 lvl=info msg="Path Provisioning" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/provisioning
+t=2023-07-03T15:40:25+0300 lvl=info msg="App mode production" logger=settings
+t=2023-07-03T15:40:25+0300 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2023-07-03T15:40:25+0300 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/grafana.db mode=-rwxrwxrwx expected=-rw-r-----
+t=2023-07-03T15:40:25+0300 lvl=info msg="Starting DB migrations" logger=migrator
+t=2023-07-03T15:40:25+0300 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=330 duration=808.929µs
+t=2023-07-03T15:40:25+0300 lvl=info msg="Starting plugin search" logger=plugins
+t=2023-07-03T15:40:31+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=input filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/input-datasource/README.md
+t=2023-07-03T15:40:31+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=grafana-plugin-admin-app filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/plugin-admin-app/img/logo.svg
+t=2023-07-03T15:40:31+0300 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2023-07-03T15:40:31+0300 lvl=info msg="Registering plugin" logger=plugins id=grafana-plugin-admin-app
+t=2023-07-03T15:40:31+0300 lvl=info msg="Live Push Gateway initialization" logger=live.push_http
+t=2023-07-03T15:40:32+0300 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2023-07-03T15:40:36+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=69 size=0 referer=
+t=2023-07-03T15:40:38+0300 lvl=info msg="Initialized channel handler" logger=live channel=grafana/dashboard/uid/WU_FjM8nz address=grafana/dashboard/uid/WU_FjM8nz
+t=2023-07-03T15:40:38+0300 lvl=info msg="Initialized channel handler" logger=live channel=stream/custom_stream_id/sma address=stream/custom_stream_id/sma
+t=2023-07-03T15:40:43+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=19 size=0 referer=
+t=2023-07-03T15:41:02+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=20 size=0 referer=
+t=2023-07-03T15:41:23+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=15 size=0 referer=
+t=2023-07-03T15:41:32+0300 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2023-07-03T15:43:50+0300 lvl=info msg="Starting Grafana" logger=server version=8.0.6 commit=68fe9e3431 branch=HEAD compiled=2021-07-15T10:49:19+0300
+t=2023-07-03T15:43:50+0300 lvl=info msg="Config loaded from" logger=settings file=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/defaults.ini
+t=2023-07-03T15:43:50+0300 lvl=info msg="Path Home" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master
+t=2023-07-03T15:43:50+0300 lvl=info msg="Path Data" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data
+t=2023-07-03T15:43:50+0300 lvl=info msg="Path Logs" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/log
+t=2023-07-03T15:43:50+0300 lvl=info msg="Path Plugins" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/plugins
+t=2023-07-03T15:43:50+0300 lvl=info msg="Path Provisioning" logger=settings path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/conf/provisioning
+t=2023-07-03T15:43:50+0300 lvl=info msg="App mode production" logger=settings
+t=2023-07-03T15:43:50+0300 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2023-07-03T15:43:50+0300 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/data/grafana.db mode=-rwxrwxrwx expected=-rw-r-----
+t=2023-07-03T15:43:51+0300 lvl=info msg="Starting DB migrations" logger=migrator
+t=2023-07-03T15:43:51+0300 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=330 duration=401.464µs
+t=2023-07-03T15:43:51+0300 lvl=info msg="Starting plugin search" logger=plugins
+t=2023-07-03T15:43:54+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=input filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/input-datasource/README.md
+t=2023-07-03T15:43:55+0300 lvl=warn msg="Plugin file's signature has been modified versus manifest" logger=plugins plugin=grafana-plugin-admin-app filename=/mnt/c/Users/chris/Desktop/Telemetry-GUI/prom_telemetry-master/plugins-bundled/internal/plugin-admin-app/plugin.json
+t=2023-07-03T15:43:55+0300 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2023-07-03T15:43:55+0300 lvl=info msg="Registering plugin" logger=plugins id=grafana-plugin-admin-app
+t=2023-07-03T15:43:55+0300 lvl=info msg="Live Push Gateway initialization" logger=live.push_http
+t=2023-07-03T15:43:55+0300 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2023-07-03T15:43:57+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-07-03T15:43:57+0300 lvl=info msg="Initialized channel handler" logger=live channel=grafana/dashboard/uid/WU_FjM8nz address=grafana/dashboard/uid/WU_FjM8nz
+t=2023-07-03T15:43:57+0300 lvl=info msg="Initialized channel handler" logger=live channel=stream/custom_stream_id/sma address=stream/custom_stream_id/sma
+t=2023-07-03T15:43:59+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-07-03T15:44:03+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=13 size=0 referer=
+t=2023-07-03T15:44:06+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=14 size=0 referer=
+t=2023-07-03T15:44:12+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-07-03T15:44:12+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-07-03T15:44:13+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-07-03T15:44:13+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-07-03T15:44:13+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2023-07-03T15:44:13+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-07-03T15:44:14+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-07-03T15:44:14+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2023-07-03T15:44:14+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-07-03T15:45:25+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=15 size=0 referer=
+t=2023-07-03T15:46:02+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=23 size=0 referer=
+t=2023-07-03T15:46:13+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=15 size=0 referer=
+t=2023-07-03T15:46:33+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=12 size=0 referer=
+t=2023-07-03T15:46:34+0300 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-07-03T16:15:55+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-07-03T16:15:56+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-07-03T16:15:56+0300 lvl=info msg="Request Completed" logger=context userId=0 orgId=1 uname= method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2023-07-03T16:15:56+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-07-03T16:15:57+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-07-03T16:16:06+0300 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2023-07-03T16:22:38+0300 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
