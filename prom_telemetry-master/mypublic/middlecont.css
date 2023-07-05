@@ -263,8 +263,13 @@ ul.content-section4 {
 ul.content-section2 {
   display: flex;
   scroll-behavior: smooth;
+<<<<<<< HEAD
   width: 650px;
   height: 380px;
+=======
+  width: fit-content;
+  height: 657px;
+>>>>>>> 7bbc0fc30ab96f894e9b55f0688f4946360c0767
   /* justify-content: space-around; */
   padding-left: 0;
   margin: 0;
@@ -367,9 +372,15 @@ justify-content: center;
     margin-right: -95px;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     width: auto;
     height: 96%;
     margin-top: 2%;
+=======
+    width:auto;
+    height: 31%;
+    margin-top: -9%;
+>>>>>>> 7bbc0fc30ab96f894e9b55f0688f4946360c0767
     font-size: 16px;
     border-radius: 14px;
     border: 1px solid var(--theme-bg-color);
