@@ -218,18 +218,18 @@
               <ul style="height: 70px; width: 80%;margin-left: 60px;">
                 <div class="content-section-title">BMS ERRORS</div>
 
-                <li class="adobe-product" id="bms-cont">
+                <li class="adobe-product" id="accu_bms_error_code-cont">
                   <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                  <div class="live" id="bms"></div>
+                  <div class="live" id="accu_bms_error_code"></div>
                   <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
                 </li>
               </ul>
               <ul style="height: 70px; width: 80%;margin-left: 60px;margin-top: 10px;">
                 <div class="content-section-title">TSAC ERRORS</div>
 
-                <li class="adobe-product" id="tsac-cont">
+                <li class="adobe-product" id="accu_tsac_error_code-cont">
                   <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                  <div class="live" id="tsac"></div>
+                  <div class="live" id="accu_tsac_error_code"></div>
                   <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
                 </li>
               </ul>
@@ -278,241 +278,583 @@
                   <div class="app-card3">
                     <div class="app-card">
                       <div class="column-container">
+                        
                         <div class="column">
-                          <div class="content-section-title">Shutdown</div>
 
                           <li class="adobe-product">
-                            <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                            <div class="products">
+                            <div class="products">inv.inv_enable</div>
+                            <div class="live"><span class="live-icon red" id="inv.inv_enable"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_inv_ok</div>
+                            <div class="live"><span class="live-icon red" id="inv_inv_ok"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_curr_lim_reached</div>
+                            <div class="live"><span class="live-icon red" id="inv_curr_lim_reached"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_curr_peak_val_warn</div>
+                            <div class="live"><span class="live-icon red" id="inv_curr_peak_val_warn"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_defective_param</div>
+                            <div class="live"><span class="live-icon red" id="inv_defective_param"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_hardware_fault</div>
+                            <div class="live"><span class="live-icon red" id="inv_hardware_fault"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_faulty_safety_circuit</div>
+                            <div class="live"><span class="live-icon red" id="inv_faulty_safety_circuit"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_can_time_out_exceeded</div>
+                            <div class="live"><span class="live-icon red" id="inv_can_time_out_exceeded"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_bad_encoder_signal</div>
+                            <div class="live"><span class="live-icon red" id="inv_bad_encoder_signal"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_overvoltage</div>
+                            <div class="live"><span class="live-icon red" id="inv_overvoltage"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_overcurrent</div>
+                            <div class="live"><span class="live-icon red" id="inv_overcurrent"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_current_measure_fault</div>
+                            <div class="live"><span class="live-icon red" id="inv_current_measure_fault"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_ballast_circuit_overload</div>
+                            <div class="live"><span class="live-icon red" id="inv_ballast_circuit_overload"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_faulty_run_signal_emi</div>
+                            <div class="live"><span class="live-icon red" id="inv_faulty_run_signal_emi"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_inactive_rfe</div>
+                            <div class="live"><span class="live-icon red" id="inv_inactive_rfe"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_power_supply_missing_or_too_low</div>
+                            <div class="live"><span class="live-icon red" id="inv_power_supply_missing_or_too_low"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_output_voltage_limit_reached</div>
+                            <div class="live"><span class="live-icon red" id="inv_output_voltage_limit_reached"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_overcurrent_200</div>
+                            <div class="live"><span class="live-icon red" id="inv_overcurrent_200"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">inv_ballast_circuit_overload_87</div>
+                            <div class="live"><span class="live-icon red" id="inv_ballast_circuit_overload_87"></span></div>
+                        </li>
 
-                              IMD
-                            </div>
-                            <div class="live"><span class="live-icon red" id="imd_status"></span></div>
-                            <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                            <div class="products">
-
-                              AMS
-                            </div>
-                            <div class="live"><span class="live-icon red" id="ams_status"></span></div>
-                            <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                            <div class="products">
-
-                              ASB
-                            </div>
-                            <div class="live"><span class="live-icon red" id="asb"></span></div>
-                            <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">
-
-                              BSPD
-                            </div>
-
-
-                            <div class="live"><span class="live-icon red" id="bspd"></span></div>
-
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">
-
-                              SD Status
-                            </div>
-
-
-                            <div class="live"><span class="live-icon red" id="sd_status"></span></div>
-
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">
-
-                              TS OFF
-                            </div>
-
-                            <div class="live"><span class="live-icon red" id="ts_off"></span></div>
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">
-
-                              SD but. left
-                            </div>
-
-                            <div class="live"><span class="live-icon red" id="sd_button_left"></span></div>
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">
-
-                              SD but. right
-                            </div>
-
-                            <div class="live"><span class="live-icon red" id="sd_button_right"></span></div>
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">
-
-                              ASMS
-                            </div>
-
-                            <div class="live"><span class="live-icon red" id="asms"></span></div>
-
-
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">HVD</div>
-                            <div class="live"><span class="live-icon red" id="hvd"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">Inverter Enable</div>
-                            <div class="live"><span class="live-icon red" id="inv_enable"></span></div>
-                          </li>
+                        <li class="adobe-product">
+                          <div class="products">can2usb_vn_200_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_vn_200_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_vn_300_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_vn_300_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_camera_left_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_camera_left_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_camera_right_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_camera_right_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_clock_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_clock_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_camera_inference_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_camera_inference_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_velocity_estimation_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_velocity_estimation_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_slam_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_slam_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_mpc_controller_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_mpc_controller_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb.path_planning_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb.path_planning_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_pi_pp_controller_ok</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_pi_pp_controller_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_steering_ctrl_enab</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_enab"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_ins_mode</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_ins_mode"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">can2usb_steering_ctrl_error_code</div>
+                          <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_error_code"></span></div>
+                      </li>
+                      
+                      
                         </div>
+
                         <div class="column">
-                          <div class="content-section-title">AIR States</div>
+
+
                           <li class="adobe-product">
-                            <div class="products">60V DC Link</div>
-                            <div class="live"><span class="live-icon red" id="60v_dc_link"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">AIR- state</div>
-                            <div class="live"><span class="live-icon red" id="air_minus_state"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">AIR- supply</div>
-                            <div class="live"><span class="live-icon red" id="air_minus_supply"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">AIR+ state</div>
-                            <div class="live"><span class="live-icon red" id="air_plus_state"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">AIR+ supply</div>
-                            <div class="live"><span class="live-icon red" id="air_plus_supply"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">Precharge state</div>
-                            <div class="live"><span class="live-icon red" id="precharge_state"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">Cockpit SD</div>
-                            <div class="live"><span class="live-icon red" id="cockpit_sd"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">BOTS SD</div>
-                            <div class="live"><span class="live-icon red" id="bots_sd"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">Inertial SD</div>
-                            <div class="live"><span class="live-icon red" id="inertial_sd"></span></div>
-                          </li>
+                            <div class="products">res_e_stop</div>
+                            <div class="live"><span class="live-icon red" id="res_e_stop"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">res_k2_switch_status</div>
+                            <div class="live"><span class="live-icon red" id="res_k2_switch_status"></span></div>
+                        </li>
+                        
+                        
+                        <li class="adobe-product">
+                            <div class="products">res_k3_button_status</div>
+                            <div class="live"><span class="live-icon red" id="res_k3_button_status"></span></div>
+                        </li>
+                        
+                        <li class="adobe-product">
+                          <div class="products">vcu_precharge_done</div>
+                          <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">vcu_r2d_done</div>
+                          <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">vcu_as_status</div>
+                          <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">vcu_bspd_error</div>
+                          <div class="live"><span class="live-icon red" id="vcu_bspd_error"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">vcu_asb_error</div>
+                          <div class="live"><span class="live-icon red" id="vcu_asb_error"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                        <div class="products">vcu_sd_closed</div>
+                        <div class="live"><span class="live-icon red" id="vcu_sd_closed"></span></div>
+                      </li>
+
+                      <li class="adobe-product">
+                        <div class="products">dash_r2d_pressed</div>
+                        <div class="live"><span class="live-icon red" id="dash_r2d_pressed"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_aux2_pressed</div>
+                        <div class="live"><span class="live-icon red" id="dash_aux2_pressed"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_regen_on</div>
+                        <div class="live"><span class="live-icon red" id="dash_regen_on"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_aero_fans_on</div>
+                        <div class="live"><span class="live-icon red" id="dash_aero_fans_on"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_pc_combo</div>
+                        <div class="live"><span class="live-icon red" id="dash_pc_combo"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_mission_locked</div>
+                        <div class="live"><span class="live-icon red" id="dash_mission_locked"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_power_limiter</div>
+                        <div class="live"><span class="live-icon red" id="dash_power_limiter"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_traction_def</div>
+                        <div class="live"><span class="live-icon red" id="dash_traction_def"></span></div>
+                    </li>
+                    
+                    
+                    <li class="adobe-product">
+                        <div class="products">dash_mission</div>
+                        <div class="live"><span class="live-icon red" id="dash_mission"></span></div>
+                    </li>
+                    
+
+                    <li class="adobe-product">
+                      <div class="products">dash_bots_sd</div>
+                      <div class="live"><span class="live-icon red" id="dash_bots_sd"></span></div>
+                  </li>
+                  
+                  
+                  <li class="adobe-product">
+                      <div class="products">dash_cockpit_sd</div>
+                      <div class="live"><span class="live-icon red" id="dash_cockpit_sd"></span></div>
+                  </li>
+                  
+                  
+                  <li class="adobe-product">
+                      <div class="products">dash_inertia_sd</div>
+                      <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
+                  </li>
+                  
                         </div>
+
                         <div class="column">
-  
-                          <div class="content-section-title">Dashboard</div>
-                          <li class="adobe-product">
-                            <div class="products">Precharge Combo</div>
-                            <div class="live"><span class="live-icon red" id="precharge_combo"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">pc_done</div>
-                            <div class="live"><span class="live-icon red" id="pc_done"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">rtd_pressed</div>
-                            <div class="live"><span class="live-icon red" id="rtd_pressed"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">rtd_done</div>
-                            <div class="live"><span class="live-icon red" id="rtd_done"></span></div>
-                          </li>
+
+                  <li class="adobe-product">
+                      <div class="products">vcu_precharge_done</div>
+                      <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
+                  </li>
+
+
+                  <li class="adobe-product">
+                      <div class="products">vcu_r2d_done</div>
+                      <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
+                  </li>
+
+
+                  <li class="adobe-product">
+                      <div class="products">vcu_as_status</div>
+                      <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
+                  </li>
+
+
                         </div>
-                      </div>
 
-                      <div class="column">
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                        <div class="column">
+
+                          <li class="adobe-product">
+                            <div class="products">ccu_pumps_on</div>
+                            <div class="live"><span class="live-icon red" id="ccu_pumps_on"></span></div>
                         </li>
+                        
+                        
                         <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                            <div class="products">ccu_motor_temp_too_high</div>
+                            <div class="live"><span class="live-icon red" id="ccu_motor_temp_too_high"></span></div>
                         </li>
+                        
+                        
                         <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                            <div class="products">ccu_device_temp_too_high</div>
+                            <div class="live"><span class="live-icon red" id="ccu_device_temp_too_high"></span></div>
                         </li>
+                        
+                        
                         <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                            <div class="products">ccu_motor_temp_limit_reached</div>
+                            <div class="live"><span class="live-icon red" id="ccu_motor_temp_limit_reached"></span></div>
                         </li>
+                        
+                        
                         <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                            <div class="products">ccu_device_temp_limit_reached</div>
+                            <div class="live"><span class="live-icon red" id="ccu_device_temp_limit_reached"></span></div>
                         </li>
+                        
                         <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
-                        </li>
-                        <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                          <div class="products">asb_pc_combo_ok</div>
+                          <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
                         </li>
 
+
                         <li class="adobe-product">
-                          <div class="products">N/A</div>
-                          <div class="live"><span class="live-icon red" id="N/A"></span></div>
+                          <div class="products">asb_brake_pressure_front_low</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span></div>
                         </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_ebs_relay_closed_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_ebs_relay_closed_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_asms_on_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_asms_on_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_computer_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_computer_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_res_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_res_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_as_status_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_as_status_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_service_brake_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_service_brake_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_ebs_pressure_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_ebs_pressure_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_begin</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_begin"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_asms_off</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_asms_off"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_service_brake_unavailable</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_service_brake_unavailable"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_ebs_pressure_low</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_ebs_pressure_low"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_mission_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_mission_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_asms_off_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_asms_off_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_service_brake_unavailable_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_service_brake_unavailable_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_manual_ebs_pressure_low_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_manual_ebs_pressure_low_error"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_as_relay_sdc</div>
+                          <div class="live"><span class="live-icon red" id="asb_as_relay_sdc"></span></div>
+                        </li>
+
+
+                        <li class="adobe-product">
+                          <div class="products">asb_asms_on</div>
+                          <div class="live"><span class="live-icon red" id="asb_asms_on"></span></div>
+                        </li>
+
+                        <li class="adobe-product">
+                          <div class="products">asb_heartbeat_ack</div>
+                          <div class="live"><span class="live-icon red" id="asb_heartbeat_ack"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_heartbeat_error</div>
+                          <div class="live"><span class="live-icon red" id="asb_heartbeat_error"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_ebs_proper_pressure</div>
+                          <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_tr_f_front_ok</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_tr_f_rear_ok</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_pc_combo_ok</div>
+                          <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_pressure_front_low</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_pressure_front_high</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_high"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_pressure_rear_low</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_pressure_rear_low"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_pressure_rear_high</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_pressure_rear_high"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_ebs_proper_pressure</div>
+                          <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_tr_f_front_ok</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
+                      </li>
+                      
+                      
+                      <li class="adobe-product">
+                          <div class="products">asb_brake_tr_f_rear_ok</div>
+                          <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
+                      </li>
+                      
+                        </div>
+
                       </div>
                     </div>
-                  </div>
                 </ul>
               </div>
 
