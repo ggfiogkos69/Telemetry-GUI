@@ -48,10 +48,10 @@ let apiRequest = new XMLHttpRequest();
   apiRequest.open('POST', 'http://localhost:3000/api/live/push/custom_stream_id');
   apiRequest.setRequestHeader('Authorization','Bearer '+ 'eyJrIjoiMm03c0lXRWY0VGxrM0Vmd2hBelN6NWdtQ3ZSMHZLMTAiLCJuIjoidGVsIiwiaWQiOjF9');
   apiRequest.send('sma,host=smar '+datanew);
-  console.log(datanew);
+  // console.log(datanew);
   if (apiRequest.readyState === 4) {
     const response = JSON.parse(apiRequest.response);
-    console.log(response)
+    // console.log(response)
 
   }
 }
@@ -126,13 +126,13 @@ function start(port, baudrate) {
 
 var lineReader = createInterface({input: myPort})
     lineReader.on('line', (mydata)=>{
-            if(mes != mydata){
-                console.log('pattern: ', mydata.toString());
+            
+                // console.log('pattern: ', mydata.toString());
                 io.sockets.emit("terminal", mydata.toString())
 
                 if( isjson(mydata)){
                   serial_data = JSON.parse(mydata)
-                  console.log("VDC: ", serial_data["vdc"])
+                  // console.log("VDC: ", serial_data["vdc"])
                   //updateChart(90,0,0)
                   //parsetoinflux(serial_data)
                   for(var key in serial_data){
@@ -142,7 +142,7 @@ var lineReader = createInterface({input: myPort})
                   parsetodatabase(serial_data)
                 }
                 mes = mydata;
-            }
+            
         });
   }
 

@@ -56,12 +56,11 @@ justify-content: center;
 }
 .block {
     margin-bottom: 10px;
-            border-radius: 25px;
--webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
-background-color: #181B1F;
-width:95%;
-
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+    background-color: #181B1F;
+    width: 32%;
 }
 .block1 {
     margin-bottom: 10px;

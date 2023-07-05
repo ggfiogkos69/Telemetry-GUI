@@ -1,7 +1,14 @@
 
 .left-container {
 }
+.left-container2 {
+width: 600px;
+}
 
+.left-container3 {
+align-self: flex-start;
+width: auto;
+}
 .dis {
   display: none !important;
 }

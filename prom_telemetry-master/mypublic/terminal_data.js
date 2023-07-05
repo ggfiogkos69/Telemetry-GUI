@@ -340,197 +340,178 @@ socket.on('regen', function(arg1) {
 });
 
 socket.on('bms', function(arg1) {
-  $('#bms_ok').removeClass('red green')  
-  $('#overvoltage').removeClass('red green')  
-  $('#undervoltage').removeClass('red green'); 
-  $('#overcurrent_charge').removeClass('red green');  
-  $('#overcurrent_discharge').removeClass('red green');
-  $('#overtemp').removeClass('red green');  
-  $('#undertemp').removeClass('red green');
-  $('#isabelle_dead').removeClass('red green');
-  $('#communication_error').removeClass('red green');
-  $('#slave_error').removeClass('red green');
-  $('#humidity_error').removeClass('red green');    
-
+     
+  
   switch(arg1){
     case 0:
-      $('#bms_ok').addClass(' green');  
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("OK") 
+      
       break;
     case 1:  
-      $('#overvoltage').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Overvoltage") 
       break;
     case 2:  
-      $('#undervoltage').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Undervoltage") 
+      
+      
       break;
     case 3:
-      $('#overcurrent_charge').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Overcurrent charge") 
+      
       break;
     case 4:   
-      $('#overcurrent_discharge').addClass(' green');
+    
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Overcurrent discharge") 
+      
       break;
     case 5:  
-      $('#overtemp').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Overtemp") 
+      
       break;
     case 6:
-      $('#undertemp').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Undertemp") 
+      
       break;
     case 7:  
-      $('#isabelle_dead').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Isabelle dead") 
+      
       break;
     case 8:
-      $('#communication_error').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Communication error") 
+  
       break;
     case 9:  
-      $('#slave_error').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Slave error") 
+      
       break;
     case 10: 
-      $('#humidity_error').addClass(' green');
+      
+      $('#bms').remove()
+      $('<div id="bms"></div>').appendTo("#bms-cont")
+      $('#bms').append("Humidity error") 
+      
       break;   
   }
-  if(!$('#bms_ok').contains('live-icon green')){
-    $('#bms_ok').addClass('red');
-  }
-  if(!$('#overvoltage').contains('live-icon green')){
-    $('#overvoltage').addClass('red');
-  }
-  if(!$('#overcurrent_charge').contains('live-icon green')){
-    $('#overcurrent_charge').addClass('red');
-  }
-  if(!$('#overcurrent_discharge').contains('live-icon green')){
-    $('#overcurrent_discharge').addClass('red');
-  }
-  if(!$('#overtemp').contains('live-icon green')){
-    $('#overtemp').addClass('red');
-  }
-  if(!$('#undertemp').contains('live-icon green')){
-    $('#undertemp').addClass('red');
-  }
-  if(!$('#isabelle_dead').contains('live-icon green')){
-    $('#isabelle_dead').addClass('red');
-  }
-  if(!$('#communication_error').contains('live-icon green')){
-    $('#communication_error').addClass('red');
-  }
-  if(!$('#slave_error').contains('live-icon green')){
-    $('#slave_error').addClass('red');
-  }
-  if(!$('#humidity_error').contains('live-icon green')){
-    $('#humidity_error').addClass('red');
-  }
+ 
 });
 
 
 
-socket.on('tsac', function(arg1) {
-  $('#tsac_ok').removeClass('red green')  
-  $('#imd_error').removeClass('red green')  
-  $('#avi_error').removeClass('red green'); 
-  $('#air_minus_stuck').removeClass('red green');  
-  $('#air_plus_stuck').removeClass('red green');
-  $('#air_minus_implausibility').removeClass('red green');  
-  $('#air_plus_implausibility').removeClass('red green');
-  $('#pc_relay_implausibility').removeClass('red green');
-  $('#pc_circuit_error').removeClass('red green');
-  $('#dcdc_overtemp').removeClass('red green');
-  $('#elcon_hardware_failure').removeClass('red green');
-  $('#overtemp_protection').removeClass('red green');
-  $('#ac_input_voltage_wrong').removeClass('red green');
-  $('#reverse_polarity').removeClass('red green');
-  $('#communication_receive_timeout').removeClass('red green');    
+socket.on('tsac', function(arg1) { 
 
   switch(arg1){
     case 0:
-      $('#tsac_ok').addClass(' green');  
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("OK")  
       break;
     case 1:  
-      $('#imd_error').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("IMD error")  
       break;
     case 2:  
-      $('#avi_error').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("AVI error") 
       break;
     case 3:
-      $('#air_minus_stuck').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("AIR minus stuck") 
       break;
     case 4:   
-      $('#air_plus_stuck').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("AIR plus stuck") 
       break;
     case 5:  
-      $('#air_minus_implausibility').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("AIR minus implausibility") 
       break;
     case 6:
-      $('#air_plus_implausibility').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("AIR plus implausibility") 
       break;
     case 7:  
-      $('#pc_relay_implausibility').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("PC relay implasibility") 
       break;
     case 8:
-      $('#pc_circuit_error').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("PC circuit error") 
       break;
     case 9:  
-      $('#dcdc_overtemp').addClass(' green');
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("DCDC overtemp") 
       break;
     case 10: 
-      $('#elcon_hardware_failure').addClass(' green');
+      
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("Elcon hardware failure") 
       break;  
     case 11:
-      $('#overtemp_protection').addClass(' green');
+      
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("Overtemp protection") 
       break; 
     case 12:
-      $('#ac_input_voltage_wrong').addClass(' green');
+      
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("AC input voltage wrong") 
       break; 
     case 13:
-      $('#reverse_polarity').addClass(' green');
+      
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("Reverse polarity") 
       break; 
     case 14:
-      $('#communication_receive_timout').addClass(' green');
+      
+      $('#tsac').remove()
+      $('<div id="tsac"></div>').appendTo("#tsac-cont")
+      $('#tsac').append("Communication receive time out") 
       break; 
+ 
   }
-  if(!$('#tsac_ok').contains('live-icon green')){
-    $('#tsac_ok').addClass('red');
-  }
-  if(!$('#imd_error').contains('live-icon green')){
-    $('#imd_error').addClass('red');
-  }
-  if(!$('#avi_error').contains('live-icon green')){
-    $('#avi_error').addClass('red');
-  }
-  if(!$('#air_minus_stuck').contains('live-icon green')){
-    $('#air_minus_stuck').addClass('red');
-  }
-  if(!$('#air_plus_stuck').contains('live-icon green')){
-    $('#air_plus_stuck').addClass('red');
-  }
-  if(!$('#air_plus_implausibility').contains('live-icon green')){
-    $('#air_plus_implausibility').addClass('red');
-  }
-  if(!$('#air_minus_implausibility').contains('live-icon green')){
-    $('#air_minus_implausibility').addClass('red');
-  }
-  if(!$('#pc_relay_implausibility').contains('live-icon green')){
-    $('#pc_relay_implausibility').addClass('red');
-  }
-  if(!$('#pc_circuit_error').contains('live-icon green')){
-    $('#pc_circuit_error').addClass('red');
-  }
-  if(!$('#dcdc_overtemp').contains('live-icon green')){
-    $('#dcdc_ovetemp').addClass('red');
-  }
-  if(!$('elcon_hardware_failure').contains('live-icon green')){
-    $('#elcon_hardware_failure').addClass('red');
-  }
-  if(!$('#overtemp_protection').contains('live-icon green')){
-    $('#overtemp_protection').addClass('red');
-  }
-  if(!$('#ac_input_voltage_wrong').contains('live-icon green')){
-    $('#ac_input_voltage_wrong').addClass('red');
-  }
-  if(!$('#reverse_polarity').contains('live-icon green')){
-    $('#reverse_polarity').addClass('red');
-  }
-  if(!$('#communication_receive_timeout').contains('live-icon green')){
-    $('#communication_receive_timeout').addClass('red');
-  }
-});
+})
 
 
 
