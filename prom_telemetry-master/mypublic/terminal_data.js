@@ -340,6 +340,477 @@ socket.on('inv_inv_ok', function(arg1) {
     
   });
 
+  
+
+socket.on('accu_max_cell_temp', function(arg1) { 
+
+  
+    $('#accu_max_cell_temp').remove()
+    $('<div id="accu_max_cell_temp"></div>').appendTo("#accu_max_cell_temp-cont")
+    $('#accu_max_cell_temp').append(arg1)  
+    
+});
+socket.on('accu_min_cell_temp', function(arg1) { 
+
+  
+  $('#accu_min_cell_temp').remove()
+  $('<div id="accu_min_cell_temp"></div>').appendTo("#accu_min_cell_temp-cont")
+  $('#accu_min_cell_temp').append(arg1)  
+  
+});
+socket.on('accu_dcdc_temp', function(arg1) { 
+
+  
+  $('#accu_dcdc_temp').remove()
+  $('<div id="accu_dcdc_temp"></div>').appendTo("#accu_dcdc_temp-cont")
+  $('#accu_dcdc_temp').append(arg1)  
+  
+});
+socket.on('accu_max_humidity', function(arg1) { 
+
+  
+  $('#accu_max_humidity').remove()
+  $('<div id="accu_max_humidity"></div>').appendTo("#accu_max_humidity-cont")
+  $('#accu_max_humidity').append(arg1)  
+  
+});
+socket.on('accu_soc_energy', function(arg1) { 
+
+  
+  $('#accu_soc_energy').remove()
+  $('<div id="accu_soc_energy"></div>').appendTo("#accu_soc_energy-cont")
+  $('#accu_soc_energy').append(arg1)  
+  
+});
+socket.on('accu_total_voltage_vs', function(arg1) { 
+
+  
+  $('#accu_total_voltage_vs').remove()
+  $('<div id="accu_total_voltage_vs"></div>').appendTo("#accu_total_voltage_vs-cont")
+  $('#accu_total_voltage_vs').append(arg1)  
+  
+});
+socket.on('accu_accu_current', function(arg1) { 
+
+  
+  $('#accu_accu_current').remove()
+  $('<div id="accu_accu_current"></div>').appendTo("#accu_accu_current-cont")
+  $('#accu_accu_current').append(arg1)  
+  
+});
+socket.on('accu_max_cell_voltage', function(arg1) { 
+
+  
+  $('#accu_max_cell_voltage').remove()
+  $('<div id="accu_max_cell_voltage"></div>').appendTo("#accu_max_cell_voltage-cont")
+  $('#accu_max_cell_voltage').append(arg1)  
+  
+});
+socket.on('accu_min_cell_voltage', function(arg1) { 
+
+  
+  $('#accu_min_cell_voltage').remove()
+  $('<div id="accu_min_cell_voltage"></div>').appendTo("#accu_min_cell_voltage-cont")
+  $('#accu_min_cell_voltage').append(arg1)  
+  
+});
+socket.on('accu_wh_consumed', function(arg1) { 
+
+  
+  $('#accu_wh_consumed').remove()
+  $('<div id="accu_wh_consumed"></div>').appendTo("#accu_wh_consumed-cont")
+  $('#accu_wh_consumed').append(arg1)  
+  
+});
+socket.on('accu_ah_consumed', function(arg1) { 
+
+  
+  $('#accu_ah_consumed').remove()
+  $('<div id="accu_ah_consumed"></div>').appendTo("#accu_ah_consumed-cont")
+  $('#accu_ah_consumed').append(arg1)  
+  
+});
+socket.on('accu_max_cell_temp', function(arg1) { 
+
+  
+  $('#pdu_max_cell_temp').remove()
+  $('<div id="pdu_max_cell_temp"></div>').appendTo("#pdu_max_cell_temp-cont")
+  $('#pdu_max_cell_temp').append(arg1)  
+  
+});
+socket.on('pdu_max_cell_voltage', function(arg1) { 
+
+  
+  $('#pdu_max_cell_voltage').remove()
+  $('<div id="pdu_max_cell_voltage"></div>').appendTo("#pdu_max_cell_voltage-cont")
+  $('#pdu_max_cell_voltage').append(arg1)  
+  
+});
+socket.on('pdu_min_cell_voltage', function(arg1) { 
+
+  
+  $('#pdu_min_cell_voltage').remove()
+  $('<div id="pdu_min_cell_voltage"></div>').appendTo("#pdu_min_cell_voltage-cont")
+  $('#pdu_min_cell_voltage').append(arg1)  
+  
+});
+socket.on('pdu_tdk1_current', function(arg1) { 
+
+  
+  $('#pdu_tdk1_current').remove()
+  $('<div id="pdu_tdk1_current"></div>').appendTo("#pdu_tdk1_current-cont")
+  $('#pdu_tdk1_current').append(arg1)  
+  
+});
+socket.on('pdu_tdk2_current', function(arg1) { 
+
+  
+  $('#pdu_tdk2_current').remove()
+  $('<div id="pdu_tdk2_current"></div>').appendTo("#pdu_tdk2_current-cont")
+  $('#pdu_tdk2_current').append(arg1)  
+  
+});
+
+socket.on('pdu_wh_consumed', function(arg1) { 
+
+  
+  $('#pdu_wh_consumed').remove()
+  $('<div id="pdu_wh_consumed"></div>').appendTo("#pdu_wh_consumed-cont")
+  $('#pdu_wh_consumed').append(arg1)  
+  
+});
+socket.on('inv_curr_lim_igbt_temp', function(arg1) { 
+
+  
+    $('#inv_curr_lim_igbt_temp').remove()
+    $('<div id="inv_curr_lim_igbt_temp"></div>').appendTo("#inv_curr_lim_igbt_temp-cont")
+    $('#inv_curr_lim_igbt_temp').append(arg1)  
+    
+});
+socket.on('inv_curr_lim_motor_temp', function(arg1) { 
+
+  
+  $('#inv_curr_lim_motor_temp').remove()
+  $('<div id="inv_curr_lim_motor_temp"></div>').appendTo("#inv_curr_lim_motor_temp-cont")
+  $('#inv_curr_lim_motor_temp').append(arg1)  
+  
+});socket.on('inv_no_power_supply_voltage', function(arg1) { 
+
+  
+  $('#inv_no_power_supply_voltage').remove()
+  $('<div id="inv_no_power_supply_voltage"></div>').appendTo("#inv_no_power_supply_voltage-cont")
+  $('#inv_no_power_supply_voltage').append(arg1)  
+  
+});
+socket.on('res_radio_quality', function(arg1) { 
+
+  
+  $('#res_radio_quality').remove()
+  $('<div id="res_radio_quality"></div>').appendTo("#res_radio_quality-cont")
+  $('#res_radio_quality').append(arg1)  
+  
+});
+
+socket.on('vcu_brake_front', function(arg1) { 
+
+  
+  $('#vcu_brake_front').remove()
+  $('<div id="vcu_brake_front"></div>').appendTo("#vcu_brake_front-cont")
+  $('#vcu_brake_front').append(arg1)  
+  
+});
+
+
+socket.on('vcu_brake_rear', function(arg1) { 
+
+  
+    $('#vcu_brake_rear').remove()
+    $('<div id="vcu_brake_rear"></div>').appendTo("#vcu_brake_rear-cont")
+    $('#vcu_brake_rear').append(arg1)  
+    
+});
+socket.on('vcu_actual_torque', function(arg1) { 
+
+  
+  $('#vcu_actual_torque').remove()
+  $('<div id="vcu_actual_torque"></div>').appendTo("#vcu_actual_torque-cont")
+  $('#vcu_actual_torque').append(arg1)  
+  
+});
+socket.on('vcu_requested_torque', function(arg1) { 
+
+  
+    $('#vcu_requested_torque').remove()
+    $('<div id="vcu_requested_torque"></div>').appendTo("#vcu_requested_torque-cont")
+    $('#vcu_requested_torque').append(arg1)  
+    
+});
+socket.on('vcu_motor_rpm', function(arg1) { 
+
+  
+  $('#vcu_motor_rpm').remove()
+  $('<div id="vcu_motor_rpm"></div>').appendTo("#vcu_motor_rpm-cont")
+  $('#vcu_motor_rpm').append(arg1)  
+  
+});
+socket.on('vcu_apps1', function(arg1) { 
+
+  
+  $('#vcu_apps1').remove()
+  $('<div id="vcu_apps1"></div>').appendTo("#vcu_apps1-cont")
+  $('#vcu_apps1').append(arg1)  
+  
+});
+socket.on('vcu_apps2', function(arg1) { 
+
+  
+  $('#vcu_apps2').remove()
+  $('<div id="vcu_apps2"></div>').appendTo("#vcu_apps2-cont")
+  $('#vcu_apps2').append(arg1)  
+  
+});
+socket.on('vcu_hall_fr', function(arg1) { 
+
+  
+  $('#vcu_hall_fr').remove()
+  $('<div id="vcu_hall_fr"></div>').appendTo("#vcu_hall_fr-cont")
+  $('#vcu_hall_fr').append(arg1)  
+  
+});
+
+
+socket.on('vcu_hall_fl', function(arg1) { 
+
+  
+    $('#vcu_hall_fl').remove()
+    $('<div id="vcu_hall_fl"></div>').appendTo("#vcu_hall_fl-cont")
+    $('#vcu_hall_fl').append(arg1)  
+    
+});
+socket.on('vcu_hall_rr', function(arg1) { 
+
+  
+  $('#vcu_hall_rr').remove()
+  $('<div id="vcu_hall_rr"></div>').appendTo("#vcu_hall_rr-cont")
+  $('#vcu_hall_rr').append(arg1)  
+  
+});
+socket.on('vcu_hall_rl', function(arg1) { 
+
+  
+  $('#vcu_hall_rl').remove()
+  $('<div id="vcu_hall_rl"></div>').appendTo("#vcu_hall_rl-cont")
+  $('#vcu_hall_rl').append(arg1)  
+  
+});
+socket.on('ccu_igbt_temp', function(arg1) { 
+
+  
+  $('#ccu_igbt_temp').remove()
+  $('<div id="ccu_igbt_temp"></div>').appendTo("#ccu_igbt_temp-cont")
+  $('#ccu_igbt_temp').append(arg1)  
+  
+});
+socket.on('ccu_motor_temp', function(arg1) { 
+
+  
+  $('#ccu_motor_temp').remove()
+  $('<div id="ccu_motor_temp"></div>').appendTo("#ccu_motor_temp-cont")
+  $('#ccu_motor_temp').append(arg1)  
+  
+});
+socket.on('plex_accel_long', function(arg1) { 
+
+  
+  $('#plex_accel_long').remove()
+  $('<div id="plex_accel_long"></div>').appendTo("#plex_accel_long-cont")
+  $('#plex_accel_long').append(arg1)  
+  
+});
+
+socket.on('plex_accel_lat', function(arg1) { 
+
+  
+    $('#plex_accel_lat').remove()
+    $('<div id="plex_accel_lat"></div>').appendTo("#plex_accel_lat-cont")
+    $('#plex_accel_lat').append(arg1)  
+    
+});
+socket.on('plex_gps_speed', function(arg1) { 
+
+  
+    $('#plex_gps_speed').remove()
+    $('<div id="plex_gps_speed"></div>').appendTo("#plex_gps_speed-cont")
+    $('#plex_gps_speed').append(arg1)  
+    
+});
+socket.on('asb_ebs_pressure', function(arg1) { 
+
+  
+  $('#asb_ebs_pressure').remove()
+  $('<div id="asb_ebs_pressure"></div>').appendTo("#asb_ebs_pressure-cont")
+  $('#asb_ebs_pressure').append(arg1)  
+  
+});
+socket.on('asb_brake_ctrl_temp', function(arg1) { 
+
+  
+  $('#asb_brake_ctrl_temp').remove()
+  $('<div id="asb_brake_ctrl_temp"></div>').appendTo("#asb_brake_ctrl_temp-cont")
+  $('#asb_brake_ctrl_temp').append(arg1)  
+  
+});
+socket.on('tpms_fr_temp', function(arg1) { 
+
+  
+  $('#tpms_fr_temp').remove()
+  $('<div id="tpms_fr_temp"></div>').appendTo("#tpms_fr_temp-cont")
+  $('#tpms_fr_temp').append(arg1)  
+  
+});socket.on('accu_max_cell_temp', function(arg1) { 
+
+  
+  $('#tpms_fr_press').remove()
+  $('<div id="tpms_fr_press"></div>').appendTo("#tpms_fr_press-cont")
+  $('#tpms_fr_press').append(arg1)  
+  
+});
+socket.on('tpms_fl_temp', function(arg1) { 
+
+  
+  $('#tpms_fl_temp').remove()
+  $('<div id="tpms_fl_temp"></div>').appendTo("#tpms_fl_temp-cont")
+  $('#tpms_fl_temp').append(arg1)  
+  
+});
+socket.on('tpms_fl_press', function(arg1) { 
+
+  
+  $('#tpms_fl_press').remove()
+  $('<div id="tpms_fl_press"></div>').appendTo("#tpms_fl_press-cont")
+  $('#tpms_fl_press').append(arg1)  
+  
+});
+socket.on('accu_max_cell_temp', function(arg1) { 
+
+  
+  $('#tpms_rr_temp').remove()
+  $('<div id="tpms_rr_temp"></div>').appendTo("#tpms_rr_temp-cont")
+  $('#tpms_rr_temp').append(arg1)  
+  
+});
+socket.on('tpms_rr_press', function(arg1) { 
+
+  
+  $('#tpms_rr_press').remove()
+  $('<div id="tpms_rr_press"></div>').appendTo("#tpms_rr_press-cont")
+  $('#tpms_rr_press').append(arg1)  
+  
+});
+socket.on('ir_infrared_fr', function(arg1) { 
+
+  
+  $('#ir_infrared_fr').remove()
+  $('<div id="ir_infrared_fr"></div>').appendTo("#ir_infrared_fr-cont")
+  $('#ir_infrared_fr').append(arg1)  
+  
+});
+socket.on('ir_infrared_fl', function(arg1) { 
+
+  
+  $('#ir_infrared_fl').remove()
+  $('<div id="ir_infrared_fl"></div>').appendTo("#ir_infrared_fl-cont")
+  $('#ir_infrared_fl').append(arg1)  
+  
+});
+socket.on('ir_infrared_rr', function(arg1) { 
+
+  
+  $('#ir_infrared_rr').remove()
+  $('<div id="ir_infrared_rr"></div>').appendTo("#ir_infrared_rr-cont")
+  $('#ir_infrared_rr').append(arg1)  
+  
+});
+socket.on('ir_infrared_rl', function(arg1) { 
+
+  
+  $('#ir_infrared_rl').remove()
+  $('<div id="ir_infrared_rl"></div>').appendTo("#ir_infrared_rl-cont")
+  $('#ir_infrared_rl').append(arg1)  
+  
+});
+socket.on('can2usb_lap_counter', function(arg1) { 
+
+  
+  $('#can2usb_lap_counter').remove()
+  $('<div id="can2usb_lap_counter"></div>').appendTo("#can2usb_lap_counter-cont")
+  $('#can2usb_lap_counter').append(arg1)  
+  
+});
+socket.on('can2usb_brake_target', function(arg1) { 
+
+  
+  $('#can2usb_brake_target').remove()
+  $('<div id="can2usb_brake_target"></div>').appendTo("#can2usb_brake_target-cont")
+  $('#can2usb_brake_target').append(arg1)  
+  
+});
+socket.on('can2usb_speed_actual', function(arg1) { 
+
+  
+  $('#can2usb_speed_actual').remove()
+  $('<div id="can2usb_speed_actual"></div>').appendTo("#can2usb_speed_actual-cont")
+  $('#can2usb_speed_actual').append(arg1)  
+  
+});
+socket.on('can2usb_speed_target', function(arg1) { 
+
+  
+  $('#can2usb_speed_target').remove()
+  $('<div id="can2usb_speed_target"></div>').appendTo("#can2usb_speed_target-cont")
+  $('#can2usb_speed_target').append(arg1)  
+  
+});
+socket.on('can2usb_pc_temperature', function(arg1) { 
+
+  
+  $('#can2usb_pc_temperature').remove()
+  $('<div id="can2usb_pc_temperature"></div>').appendTo("#can2usb_pc_temperature-cont")
+  $('#can2usb_pc_temperature').append(arg1)  
+  
+});
+socket.on('can2usb_steering_ctrl_temp', function(arg1) { 
+
+  
+  $('#can2usb_steering_ctrl_temp').remove()
+  $('<div id="can2usb_steering_ctrl_temp"></div>').appendTo("#can2usb_steering_ctrl_temp-cont")
+  $('#can2usb_steering_ctrl_temp').append(arg1)  
+  
+});
+socket.on('can2usb_steering_target', function(arg1) { 
+
+  
+  $('#can2usb_steering_target').remove()
+  $('<div id="can2usb_steering_target"></div>').appendTo("#can2usb_steering_target-cont")
+  $('#can2usb_steering_target').append(arg1)  
+  
+});
+socket.on('tpms_rl_temp', function(arg1) { 
+
+  
+  $('#tpms_rl_temp').remove()
+  $('<div id="tpms_rl_temp"></div>').appendTo("#tpms_rl_temp-cont")
+  $('#tpms_rl_temp').append(arg1)  
+  
+});
+socket.on('tpms_rl_press', function(arg1) { 
+
+  
+  $('#tpms_rl_press').remove()
+  $('<div id="tpms_rl_press"></div>').appendTo("#tpms_rl_press-cont")
+  $('#tpms_rl_press').append(arg1)  
+  
+});
 socket.on('accu_bms_error_code', function(arg1) {
      
   
@@ -430,81 +901,81 @@ socket.on('accu_bms_error_code', function(arg1) {
 socket.on('accu_tsac_error_code', function(arg1) { 
 
   switch(arg1){
-    case 0:
+    case 11:
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("OK")  
       break;
-    case 1:  
+    case 12:  
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("IMD error")  
       break;
-    case 2:  
+    case 13:  
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("AVI error") 
       break;
-    case 3:
+    case 14:
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("AIR minus stuck") 
       break;
-    case 4:   
+    case 15:   
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("AIR plus stuck") 
       break;
-    case 5:  
+    case 16:  
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("AIR minus implausibility") 
       break;
-    case 6:
+    case 17:
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("AIR plus implausibility") 
       break;
-    case 7:  
+    case 18:  
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("PC relay implasibility") 
       break;
-    case 8:
+    case 19:
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("PC circuit error") 
       break;
-    case 9:  
+    case 20:  
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("DCDC overtemp") 
       break;
-    case 10: 
+    case 21: 
       
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("Elcon hardware failure") 
       break;  
-    case 11:
+    case 22:
       
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("Overtemp protection") 
       break; 
-    case 12:
+    case 23:
       
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("AC input voltage wrong") 
       break; 
-    case 13:
+    case 24:
       
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
       $('#accu_tsac_error_code').append("Reverse polarity") 
       break; 
-    case 14:
+    case 25:
       
       $('#accu_tsac_error_code').remove()
       $('<div id="accu_tsac_error_code"></div>').appendTo("#accu_tsac_error_code-cont")
