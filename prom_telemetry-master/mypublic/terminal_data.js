@@ -1240,7 +1240,7 @@ socket.on('inv_output_voltage_limit_reached', function(arg1) {
   if (arg1 == 1) {
     $('#inv_output_voltage_limit_reached').addClass(' green'); // Add the 'green' color class
   } else {
-    $('#inv_inv_ok').addClass(' red'); // Add the 'red' color class
+    $('#inv_output_voltage_limit_reached').addClass(' red'); // Add the 'red' color class
   }
   
 });
