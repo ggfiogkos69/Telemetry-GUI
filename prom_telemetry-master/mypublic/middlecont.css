@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 .MIDDLE-container {
-  width: 620px;
-  height: 108%;
+  width: 900px;
+  height: 600px;
 }
 .RIGHT-container{
   width: 45%;
-  height: 108%;
+  height: 400px;
 }
 .live{
   width: 200px
@@ -261,8 +261,8 @@ ul.content-section2 {
   display: flex;
   scroll-behavior: smooth;
 
-  width: 810px;
-  height: 380px;
+  width: 890px;
+  height: 400px;
 
   /* justify-content: space-around; */
   padding-left: 0;
@@ -276,7 +276,7 @@ ul.content-section2 {
     scroll-behavior: smooth;
   
     width: 785px;
-    height: 380px;
+    height: 400px;
     color: white;
     /* justify-content: space-around; */
     padding-left: 0;
@@ -355,7 +355,7 @@ justify-content: center;
 .apps-card2 {
   display: flex;
   flex-wrap: wrap;
-  height: 189%;
+  height: 100%;
   width: 80%;
   align-items: start;
   justify-content: left;

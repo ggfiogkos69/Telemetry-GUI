@@ -169,57 +169,12 @@
 
           <div class="content-wrapper">
             <div class="content-section">
-              <div class="apps-card">
-                <div class="app-card" style="width:20% !important;">
-                  <ul>
-                    <div class="content-section-title">Min Cell Volt</div>
-
-                    <li class="adobe-product" id="accu_min_cell_voltage-cont">
-                      <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                      <div class="live" id="accu_min_cell_voltage">56</div>
-                      <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-                    </li>
-                  </ul>
-                </div>
-                <div class="app-card" style="width:20% !important;">
-                  <ul>
-                    <div class="content-section-title">Max Cell Temp</div>
-
-                    <li class="adobe-product" id="accu_max_cell_temp-cont">
-                      <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                      <div class="live" id="accu_max_cell_temp">56</div>
-                      <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-                    </li>
-                  </ul>
-                </div>
-                <div class="app-card" style="width:20% !important;">
-                  <ul>
-                    <div class="content-section-title">IGBT Temp</div>
-
-                    <li class="adobe-product" id="inv_curr_lim_igbt_temp-cont">
-                      <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                      <div class="live" id="inv_curr_lim_igbt_temp">56</div>
-                      <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-                    </li>
-                  </ul>
-                </div>
-                <div class="app-card" style="width:20% !important; margin-top: 0px !important;">
-                  <ul>
-                    <div class="content-section-title">Motor Temp</div>
-
-                    <li class="adobe-product" id="inv_curr_lim_motor_temp-cont">
-                      <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                      <div class="live" id="inv_curr_lim_motor_temp">56</div>
-                      <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              
               <ul style="height: 70px; width: 80%;margin-left: 60px;">
                 <div class="content-section-title">BMS ERRORS</div>
 
                 <li class="adobe-product" id="accu_bms_error_code-cont">
-                  <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+                  
                   <div class="live" id="accu_bms_error_code"></div>
                   <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
                 </li>
@@ -228,12 +183,20 @@
                 <div class="content-section-title">TSAC ERRORS</div>
 
                 <li class="adobe-product" id="accu_tsac_error_code-cont">
-                  <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
+                  
                   <div class="live" id="accu_tsac_error_code"></div>
                   <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
                 </li>
               </ul>
+              <ul style="height: 70px; width: 80%;margin-left: 60px;margin-top: 10px;">
+                <div class="content-section-title">MISSION</div>
 
+                <li class="adobe-product" id="dash_mission-cont">
+                  
+                  <div class="live" id="dash_mission"></div>
+                  <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                </li>
+              </ul>
 
             </div>
 
@@ -243,13 +206,200 @@
 
 
       </div>
+      <div class='left-container container' style = "width: 150px;">
+        <ul style = "
+        display: block;
+        scroll-behavior: smooth;
+        width: 100%;
+        height: auto;
+        color: white;
+        /* justify-content: space-around; */
+        padding-left: 0;
+        margin: 0;
+        border-radius: 20px;
+        background-color: #404958;
+        align-items: start;
+        
+        ">
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Max Cell Temp</div>
 
+          <li class="adobe-product" id="accu_max_cell_temp-cont">
+            
+            <div class="live" id="accu_max_cell_temp" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
 
+          </li>
+        </ul>
 
-      <!--  <h2 class="titular">Voltage</h2> -->
-      <!-- <button class = "time_picker" style="float: left" id="currange" onclick="openForm()">Time: from now-5m to now</button>
-            <button class="btn" onclick="fullscreen()" style=" float: right; z-index : 3; background-color:none; color:white;"><i class="fa fa-expand" style="z-index:3; color: white;"></i></button> -->
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Min Cell Temp</div>
 
+          <li class="adobe-product" id="accu_min_cell_temp-cont">
+            
+            <div class="live" id="accu_min_cell_temp" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">IGBT Temp</div>
+
+          <li class="adobe-product" id="ccu_igbt_temp-cont">
+            
+            <div class="live" id="ccu_igbt_temp" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Motor Temp</div>
+
+          <li class="adobe-product" id="ccu_motor_temp-cont">
+            
+            <div class="live" id="ccu_motor_temp" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Error Position</div>
+
+          <li class="adobe-product" id="accu_error_position-cont">
+            
+            <div class="live" id="accu_error_position" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Min Cell Volt. Pos</div>
+
+          <li class="adobe-product" id="accu_min_cell_voltage_pos-cont">
+            
+            <div class="live" id="accu_min_cell_voltage_pos" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Max Cell Volt. Pos</div>
+
+          <li class="adobe-product" id="accu_max_cell_voltage_pos-cont">
+            
+            <div class="live" id="accu_max_cell_voltage_pos" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;"></div>
+
+          <li class="adobe-product" id="NA-cont">
+            
+            <div class="live" id="NA" style = "margin-left: 30%;"></div>
+
+          </li>
+        </ul>
+
+      </ul>
+      </div>
+      <div class='left-container container' style = "width: 150px;">
+        <ul style = "
+        display: block;
+        scroll-behavior: smooth;
+        width: 100%;
+        height: auto;
+        color: white;
+        /* justify-content: space-around; */
+        padding-left: 0;
+        margin: 0;
+        border-radius: 20px;
+        background-color: #404958;
+        align-items: start;
+        
+        ">
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">RSSI</div>
+
+          <li class="adobe-product" id="radio_rssi-cont">
+            
+            <div class="live" id="radio_rssi" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Packet Loss</div>
+
+          <li class="adobe-product" id="radio_packet_loss-cont">
+            
+            <div class="live" id="radio_packet_loss" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;">Wrong CRC</div>
+
+          <li class="adobe-product" id="radio_wrong_crc-cont">
+            
+            <div class="live" id="radio_wrong_crc" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;"></div>
+
+          <li class="adobe-product" id="NA-cont">
+            
+            <div class="live" id="NA" style = "margin-left: 30%;"></div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;"></div>
+
+          <li class="adobe-product" id="NA-cont">
+            
+            <div class="live" id="NA" style = "margin-left: 30%;"></div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;"></div>
+
+          <li class="adobe-product" id="NA-cont">
+            
+            <div class="live" id="NA" style = "margin-left: 30%;"></div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;"></div>
+
+          <li class="adobe-product" id="NA-cont">
+            
+            <div class="live" id="NA" style = "margin-left: 30%;"></div>
+
+          </li>
+        </ul>
+
+        <ul style = "height: 50px; width: 100%;">
+          <div class="content-section-title" style = "margin-left: 5%;"></div>
+
+          <li class="adobe-product" id="NA-cont">
+            
+            <div class="live" id="NA" style = "margin-left: 30%;"></div>
+
+          </li>
+        </ul>
+
+      </ul>
+      </div>
       <div class="form-popup" style="position:absolute; z-index:4; top : 40px; left: 1px; " id="myForm">
         <form action="/action_page.php" class="form-container">
           <div class="text"> From </div>
@@ -263,724 +413,731 @@
 
         </form>
       </div>
-
-
-      <!-- MIDDLE-CONTAINER - SIGNAL STATE -->
-      <div class="MIDDLE-container container">
-        <div class="BINARY-chart-block block2 clear">
-
-
-          <div class="content-wrapper">
-            <div class="content-section3">
-
-              <div class="apps-card2">
-                <ul class=content-section2>
-                  <div class="app-card3">
-                    <div class="app-card">
-                      <div class="column-container">
-
-                        <div class="column">
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">INV</h1>
-                          <li class="adobe-product">
-                            <div class="products">inv_enable</div>
-                            <div class="live"><span class="live-icon red" id="inv_inv_enable"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ok</div>
-                            <div class="live"><span class="live-icon red" id="inv_inv_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">curr_lim_reached</div>
-                            <div class="live"><span class="live-icon red" id="inv_curr_lim_reached"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">curr_peak_val_warn</div>
-                            <div class="live"><span class="live-icon red" id="inv_curr_peak_val_warn"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">defective_param</div>
-                            <div class="live"><span class="live-icon red" id="inv_defective_param"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">hardware_fault</div>
-                            <div class="live"><span class="live-icon red" id="inv_hardware_fault"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">faulty_safety_circuit</div>
-                            <div class="live"><span class="live-icon red" id="inv_faulty_safety_circuit"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">can_time_out_exceeded</div>
-                            <div class="live"><span class="live-icon red" id="inv_can_time_out_exceeded"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">bad_encoder_signal</div>
-                            <div class="live"><span class="live-icon red" id="inv_bad_encoder_signal"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">overvoltage</div>
-                            <div class="live"><span class="live-icon red" id="inv_overvoltage"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">overcurrent</div>
-                            <div class="live"><span class="live-icon red" id="inv_overcurrent"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">current_measure_fault</div>
-                            <div class="live"><span class="live-icon red" id="inv_current_measure_fault"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ballast_circuit_overload</div>
-                            <div class="live"><span class="live-icon red" id="inv_ballast_circuit_overload"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">faulty_run_signal_emi</div>
-                            <div class="live"><span class="live-icon red" id="inv_faulty_run_signal_emi"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">inactive_rfe</div>
-                            <div class="live"><span class="live-icon red" id="inv_inactive_rfe"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">power_supply_missing_or_too_low</div>
-                            <div class="live"><span class="live-icon red"
-                                id="inv_power_supply_missing_or_too_low"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">output_voltage_limit_reached</div>
-                            <div class="live"><span class="live-icon red" id="inv_output_voltage_limit_reached"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">overcurrent_200</div>
-                            <div class="live"><span class="live-icon red" id="inv_overcurrent_200"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ballast_circuit_overload_87</div>
-                            <div class="live"><span class="live-icon red" id="inv_ballast_circuit_overload_87"></span>
-                            </div>
-                          </li>
-                        </div>
-                        <div class="column">
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">CAN2USB</h1>
-                          <li class="adobe-product">
-                            <div class="products">vn_200_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_vn_200_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">vn_300_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_vn_300_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">camera_left_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_camera_left_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">camera_right_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_camera_right_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">clock_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_clock_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">camera_inference_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_camera_inference_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">velocity_estimation_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_velocity_estimation_ok"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">slam_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_slam_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">mpc_controller_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_mpc_controller_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">path_planning_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_path_planning_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">pi_pp_controller_ok</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_pi_pp_controller_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">steering_ctrl_enab</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_enab"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ins_mode</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_ins_mode"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">steering_ctrl_error_code</div>
-                            <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_error_code"></span>
-                            </div>
-                          </li>
-
-
-
-                          <title>RES</title>
-                          <li class="adobe-product">
-                            <div class="products">e_stop</div>
-                            <div class="live"><span class="live-icon red" id="res_e_stop"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">k2_switch_status</div>
-                            <div class="live"><span class="live-icon red" id="res_k2_switch_status"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">k3_button_status</div>
-                            <div class="live"><span class="live-icon red" id="res_k3_button_status"></span></div>
-                          </li>
-                        </div>
-                        <div class="column">
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">VCU</h1>
-                          <li class="adobe-product">
-                            <div class="products">precharge_done</div>
-                            <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">r2d_done</div>
-                            <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">as_status</div>
-                            <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">bspd_error</div>
-                            <div class="live"><span class="live-icon red" id="vcu_bspd_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">asb_error</div>
-                            <div class="live"><span class="live-icon red" id="vcu_asb_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">sd_closed</div>
-                            <div class="live"><span class="live-icon red" id="vcu_sd_closed"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">precharge_done</div>
-                            <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">r2d_done</div>
-                            <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">as_status</div>
-                            <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
-                          </li>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;; ">DASH</h1>
-                          <li class="adobe-product">
-                            <div class="products">r2d_pressed</div>
-                            <div class="live"><span class="live-icon red" id="dash_r2d_pressed"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">aux2_pressed</div>
-                            <div class="live"><span class="live-icon red" id="dash_aux2_pressed"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">regen_on</div>
-                            <div class="live"><span class="live-icon red" id="dash_regen_on"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">aero_fans_on</div>
-                            <div class="live"><span class="live-icon red" id="dash_aero_fans_on"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">pc_combo</div>
-                            <div class="live"><span class="live-icon red" id="dash_pc_combo"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">mission_locked</div>
-                            <div class="live"><span class="live-icon red" id="dash_mission_locked"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">power_limiter</div>
-                            <div class="live"><span class="live-icon red" id="dash_power_limiter"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">traction_def</div>
-                            <div class="live"><span class="live-icon red" id="dash_traction_def"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">mission</div>
-                            <div class="live"><span class="live-icon red" id="dash_mission"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">bots_sd</div>
-                            <div class="live"><span class="live-icon red" id="dash_bots_sd"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">cockpit_sd</div>
-                            <div class="live"><span class="live-icon red" id="dash_cockpit_sd"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">inertia_sd</div>
-                            <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
-                          </li>
-
-                          <li class="adobe-product">
-                            <div class="products">accu_over_60v_dclink</div>
-                            <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
-                          </li>
-
-
-                          </li>
-
-
-
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">CCU</h1>
-                          <li class="adobe-product">
-                            <div class="products">pumps_on</div>
-                            <div class="live"><span class="live-icon red" id="ccu_pumps_on"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">motor_temp_too_high</div>
-                            <div class="live"><span class="live-icon red" id="ccu_motor_temp_too_high"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">device_temp_too_high</div>
-                            <div class="live"><span class="live-icon red" id="ccu_device_temp_too_high"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">motor_temp_limit_reached</div>
-                            <div class="live"><span class="live-icon red" id="ccu_motor_temp_limit_reached"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">device_temp_limit_reached</div>
-                            <div class="live"><span class="live-icon red" id="ccu_device_temp_limit_reached"></span>
-                            </div>
-                          </li>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">ACCU</h1>
-                          <li class="adobe-product">
-                            <div class="products">accu_air_m_state</div>
-                            <div class="live"><span class="live-icon red" id="accu_air_m_state"></span></div>
-                          </li>
-
-                          <li class="adobe-product">
-                            <div class="products">accu_air_m_supp</div>
-                            <div class="live"><span class="live-icon red" id="accu_air_m_supp"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">accu_air_p_state</div>
-                            <div class="live"><span class="live-icon red" id="accu_air_p_state"></span></div>
-                          </li>
-                          <li class="adobe-product">
-                            <div class="products">accu_air_p_supp</div>
-                            <div class="live"><span class="live-icon red" id="accu_air_p_supp"></span></div>
-                        </div>
-
-                        <div class="column">
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">ASB</h1>
-                          <li class="adobe-product">
-                            <div class="products">pc_combo_ok</div>
-                            <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_pressure_front_low</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ebs_relay_closed_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_ebs_relay_closed_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">asms_on_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_asms_on_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">computer_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_computer_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">res_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_res_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">as_status_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_as_status_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">service_brake_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_service_brake_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ebs_pressure_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_ebs_pressure_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_begin</div>
-                            <div class="live"><span class="live-icon red" id="asb_manual_begin"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_asms_off</div>
-                            <div class="live"><span class="live-icon red" id="asb_manual_asms_off"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_service_brake_unavailable</div>
-                            <div class="live"><span class="live-icon red"
-                                id="asb_manual_service_brake_unavailable"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_ebs_pressure_low</div>
-                            <div class="live"><span class="live-icon red" id="asb_manual_ebs_pressure_low"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_mission_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_manual_mission_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_asms_off_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_manual_asms_off_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_service_brake_unavailable_error</div>
-                            <div class="live"><span class="live-icon red"
-                                id="asb_manual_service_brake_unavailable_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">manual_ebs_pressure_low_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_manual_ebs_pressure_low_error"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">as_relay_sdc</div>
-                            <div class="live"><span class="live-icon red" id="asb_as_relay_sdc"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">asms_on</div>
-                            <div class="live"><span class="live-icon red" id="asb_asms_on"></span></div>
-                          </li>
-
-                          <li class="adobe-product">
-                            <div class="products">heartbeat_ack</div>
-                            <div class="live"><span class="live-icon red" id="asb_heartbeat_ack"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">heartbeat_error</div>
-                            <div class="live"><span class="live-icon red" id="asb_heartbeat_error"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ebs_proper_pressure</div>
-                            <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_tr_f_front_ok</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_tr_f_rear_ok</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">pc_combo_ok</div>
-                            <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_pressure_front_low</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_pressure_front_high</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_high"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_pressure_rear_low</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_pressure_rear_low"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_pressure_rear_high</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_pressure_rear_high"></span>
-                            </div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">ebs_proper_pressure</div>
-                            <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_tr_f_front_ok</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
-                          </li>
-
-
-                          <li class="adobe-product">
-                            <div class="products">brake_tr_f_rear_ok</div>
-                            <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
-                          </li>
-                        </div>
-
-
-
-
-
-                      </div>
-                    </div>
-                </ul>
+      <div class="RIGHT-container container">
+        <ul style="
+      display: flex;
+      scroll-behavior: smooth;
+      width: 265px;
+      height: 400px;
+      color: white;
+      /* justify-content: space-around; */
+      padding-left: 0;
+      margin: 0;
+      border-radius: 20px;
+      background-color: #404958;
+      ;">
+          <div class="app-card3">
+            <div class="app-card">
+              <h1 style = "font-size: 17px;text-align:center;">SHUTDOWN</h1>
+              <div class="column-container">
+
+              <div class="column">
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">bspd_error</div>
+                <div class="live"><span class="live-icon red" id="vcu_bspd_error"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">asb_error</div>
+                <div class="live"><span class="live-icon red" id="vcu_asb_error"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">res_error</div>
+                <div class="live"><span class="live-icon red" id="asb_res_error"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">imd_error</div>
+                <div class="live"><span class="live-icon red" id="accu_imd_error"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">ams_error</div>
+                <div class="live"><span class="live-icon red" id="accu_ams_error"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">bots_sd</div>
+                <div class="live"><span class="live-icon red" id="dash_bots_sd"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">cockpit_sd</div>
+                <div class="live"><span class="live-icon red" id="dash_cockpit_sd"></span></div>
+              </li>
               </div>
+              <div class="column" style = "margin-left: -100px;">
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">inertia_sd</div>
+                <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">sd_closed</div>
+                <div class="live"><span class="live-icon red" id="vcu_sd_closed"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">sd_button_right</div>
+                <div class="live"><span class="live-icon red" id="asb_sd_button_right"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">sd_button_left</div>
+                <div class="live"><span class="live-icon red" id="asb_sd_button_left"></span></div>
+              </li>
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">air_m_state</div>
+                <div class="live"><span class="live-icon red" id="accu_air_m_state"></span></div>
+              </li>
 
+              <li class="adobe-product" style="padding: 8px;">
+                <div class="products">air_p_state</div>
+                <div class="live"><span class="live-icon red" id="accu_air_p_state"></span></div>
+              </li>
+              </div>
             </div>
           </div>
-        </div>
+        </ul>
       </div>
+      <!-- MIDDLE-CONTAINER - SIGNAL STATE -->
+     
     </div>
-    <div class="main-container">
+    <div class="main-container" 
+    style = "    
+    margin: 110px;
+    margin-left: 80px;
+    height: 600px;
+    ">
       <div class="column-container">
 
         <div class="column">
-          <div class="RIGHT-container container">
-            <ul style="
-          display: flex;
-          scroll-behavior: smooth;
-          width: 250px;
-          height: 380px;
-          color: white;
-          /* justify-content: space-around; */
-          padding-left: 0;
-          margin: 0;
-          border-radius: 20px;
-          background-color: #404958;
-          ;">
-              <div class="app-card3">
-                <div class="app-card">
-                  <h1 style = "font-size: 17px;">SHUTDOWN</h1>
-                  <li class="adobe-product">
-                    <div class="products">bspd_error</div>
-                    <div class="live"><span class="live-icon red" id="vcu_bspd_error"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">asb_error</div>
-                    <div class="live"><span class="live-icon red" id="vcu_asb_error"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">res_error</div>
-                    <div class="live"><span class="live-icon red" id="asb_res_error"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">imd_error</div>
-                    <div class="live"><span class="live-icon red" id="accu_imd_error"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">ams_error</div>
-                    <div class="live"><span class="live-icon red" id="accu_ams_error"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">bots_sd</div>
-                    <div class="live"><span class="live-icon red" id="dash_bots_sd"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">cockpit_sd</div>
-                    <div class="live"><span class="live-icon red" id="dash_cockpit_sd"></span></div>
-                  </li>
-
-                  <li class="adobe-product">
-                    <div class="products">inertia_sd</div>
-                    <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">sd_closed</div>
-                    <div class="live"><span class="live-icon red" id="vcu_sd_closed"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">sd_button_right</div>
-                    <div class="live"><span class="live-icon red" id="asb_sd_button_right"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">sd_button_left</div>
-                    <div class="live"><span class="live-icon red" id="asb_sd_button_left"></span></div>
-                  </li>
-                  <li class="adobe-product">
-                    <div class="products">air_m_state</div>
-                    <div class="live"><span class="live-icon red" id="accu_air_m_state"></span></div>
-                  </li>
-
-                  <li class="adobe-product">
-                    <div class="products">air_p_state</div>
-                    <div class="live"><span class="live-icon red" id="accu_air_p_state"></span></div>
-                  </li>
-
+          <div class="MIDDLE-container container">
+            <div class="BINARY-chart-block block2 clear">
+    
+    
+              <div class="content-wrapper">
+                <div class="content-section3">
+    
+                  <div class="apps-card2">
+                    <ul class=content-section2>
+                      <div class="app-card3">
+                        <div class="app-card">
+                          <div class="column-container">
+    
+                            <div class="column">
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">INV</h1>
+                              <li class="adobe-product">
+    
+                                <div class="products">inv_enable</div>
+                                <div class="live"><span class="live-icon red" id="inv_inv_enable"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ok</div>
+                                <div class="live"><span class="live-icon red" id="inv_inv_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">curr_lim_reached</div>
+                                <div class="live"><span class="live-icon red" id="inv_curr_lim_reached"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">curr_peak_val_warn</div>
+                                <div class="live"><span class="live-icon red" id="inv_curr_peak_val_warn"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">defective_param</div>
+                                <div class="live"><span class="live-icon red" id="inv_defective_param"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">hardware_fault</div>
+                                <div class="live"><span class="live-icon red" id="inv_hardware_fault"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">faulty_safety_circuit</div>
+                                <div class="live"><span class="live-icon red" id="inv_faulty_safety_circuit"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">can_time_out_exceeded</div>
+                                <div class="live"><span class="live-icon red" id="inv_can_time_out_exceeded"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">bad_encoder_signal</div>
+                                <div class="live"><span class="live-icon red" id="inv_bad_encoder_signal"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">overvoltage</div>
+                                <div class="live"><span class="live-icon red" id="inv_overvoltage"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">overcurrent</div>
+                                <div class="live"><span class="live-icon red" id="inv_overcurrent"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">current_measure_fault</div>
+                                <div class="live"><span class="live-icon red" id="inv_current_measure_fault"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ballast_circuit_overload</div>
+                                <div class="live"><span class="live-icon red" id="inv_ballast_circuit_overload"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">faulty_run_signal_emi</div>
+                                <div class="live"><span class="live-icon red" id="inv_faulty_run_signal_emi"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">inactive_rfe</div>
+                                <div class="live"><span class="live-icon red" id="inv_inactive_rfe"></span></div>
+                              </li>
+    
+                              
+                              
+                              <li class="adobe-product">
+                                <div class="products">ballast_circuit_overload_87</div>
+                                <div class="live"><span class="live-icon red" id="inv_ballast_circuit_overload_87"></span>
+                                </div>
+                              </li>
+                              
+                              
+                              
+                              <li class="adobe-product">
+                                <div class="products">overcurrent_200</div>
+                                <div class="live"><span class="live-icon red" id="inv_overcurrent_200"></span></div>
+                              </li>
+                              
+                              <li class="adobe-product">
+                                <div class="products">output_voltage_limit_reached</div>
+                                <div class="live"><span class="live-icon red" id="inv_output_voltage_limit_reached"></span>
+                                </div>
+                              </li>
+    
+                              <li class="adobe-product">
+                                <div class="products">power_supply_missing_or_too_low</div>
+                                <div class="live"><span class="live-icon red"
+                                    id="inv_power_supply_missing_or_too_low"></span></div>
+                              </li>
+    
+                            </div>
+                            <div class="column">
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">CAN2USB</h1>
+                              <li class="adobe-product">
+                                <div class="products">vn_200_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_vn_200_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">vn_300_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_vn_300_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">camera_left_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_camera_left_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">camera_right_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_camera_right_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">clock_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_clock_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">camera_inference_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_camera_inference_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">velocity_estimation_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_velocity_estimation_ok"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">slam_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_slam_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">mpc_controller_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_mpc_controller_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">path_planning_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_path_planning_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">pi_pp_controller_ok</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_pi_pp_controller_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">steering_ctrl_enab</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_enab"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ins_mode</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_ins_mode"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">steering_ctrl_error_code</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_error_code"></span>
+                                </div>
+                              </li>
+    
+    
+    
+                              <title>RES</title>
+                              <li class="adobe-product">
+                                <div class="products">e_stop</div>
+                                <div class="live"><span class="live-icon red" id="res_e_stop"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">k2_switch_status</div>
+                                <div class="live"><span class="live-icon red" id="res_k2_switch_status"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">k3_button_status</div>
+                                <div class="live"><span class="live-icon red" id="res_k3_button_status"></span></div>
+                              </li>
+                            </div>
+                            <div class="column">
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">VCU</h1>
+                              <li class="adobe-product">
+                                <div class="products">precharge_done</div>
+                                <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">r2d_done</div>
+                                <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">as_status</div>
+                                <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">bspd_error</div>
+                                <div class="live"><span class="live-icon red" id="vcu_bspd_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">asb_error</div>
+                                <div class="live"><span class="live-icon red" id="vcu_asb_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">sd_closed</div>
+                                <div class="live"><span class="live-icon red" id="vcu_sd_closed"></span></div>
+                              </li>
+                              <li class="adobe-product">
+                                <div class="products">precharge_done</div>
+                                <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">r2d_done</div>
+                                <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">as_status</div>
+                                <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
+                              </li>
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;; ">DASH</h1>
+                              <li class="adobe-product">
+                                <div class="products">r2d_pressed</div>
+                                <div class="live"><span class="live-icon red" id="dash_r2d_pressed"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">aux2_pressed</div>
+                                <div class="live"><span class="live-icon red" id="dash_aux2_pressed"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">regen_on</div>
+                                <div class="live"><span class="live-icon red" id="dash_regen_on"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">aero_fans_on</div>
+                                <div class="live"><span class="live-icon red" id="dash_aero_fans_on"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">pc_combo</div>
+                                <div class="live"><span class="live-icon red" id="dash_pc_combo"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">mission_locked</div>
+                                <div class="live"><span class="live-icon red" id="dash_mission_locked"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">power_limiter</div>
+                                <div class="live"><span class="live-icon red" id="dash_power_limiter"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">traction_def</div>
+                                <div class="live"><span class="live-icon red" id="dash_traction_def"></span></div>
+                              </li>
+    
+    
+                             
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">bots_sd</div>
+                                <div class="live"><span class="live-icon red" id="dash_bots_sd"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">cockpit_sd</div>
+                                <div class="live"><span class="live-icon red" id="dash_cockpit_sd"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">inertia_sd</div>
+                                <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
+                              </li>
+    
+                              <li class="adobe-product">
+                                <div class="products">accu_over_60v_dclink</div>
+                                <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
+                              </li>
+    
+    
+                              </li>
+    
+    
+    
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;">CCU</h1>
+                              <li class="adobe-product">
+                                <div class="products">pumps_on</div>
+                                <div class="live"><span class="live-icon red" id="ccu_pumps_on"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">motor_temp_too_high</div>
+                                <div class="live"><span class="live-icon red" id="ccu_motor_temp_too_high"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">device_temp_too_high</div>
+                                <div class="live"><span class="live-icon red" id="ccu_device_temp_too_high"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">motor_temp_limit_reached</div>
+                                <div class="live"><span class="live-icon red" id="ccu_motor_temp_limit_reached"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">device_temp_limit_reached</div>
+                                <div class="live"><span class="live-icon red" id="ccu_device_temp_limit_reached"></span>
+                                </div>
+                              </li>
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">ACCU</h1>
+                              <li class="adobe-product">
+                                <div class="products">accu_air_m_state</div>
+                                <div class="live"><span class="live-icon red" id="accu_air_m_state"></span></div>
+                              </li>
+    
+                              <li class="adobe-product">
+                                <div class="products">accu_air_m_supp</div>
+                                <div class="live"><span class="live-icon red" id="accu_air_m_supp"></span></div>
+                              </li>
+                              <li class="adobe-product">
+                                <div class="products">accu_air_p_state</div>
+                                <div class="live"><span class="live-icon red" id="accu_air_p_state"></span></div>
+                              </li>
+                              <li class="adobe-product">
+                                <div class="products">accu_air_p_supp</div>
+                                <div class="live"><span class="live-icon red" id="accu_air_p_supp"></span></div>
+                            </div>
+    
+                            <div class="column">
+                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;">ASB</h1>
+                              <li class="adobe-product">
+                                <div class="products">pc_combo_ok</div>
+                                <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_pressure_front_low</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ebs_relay_closed_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_ebs_relay_closed_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">asms_on_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_asms_on_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">computer_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_computer_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">res_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_res_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">as_status_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_as_status_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">service_brake_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_service_brake_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ebs_pressure_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_ebs_pressure_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_begin</div>
+                                <div class="live"><span class="live-icon red" id="asb_manual_begin"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_asms_off</div>
+                                <div class="live"><span class="live-icon red" id="asb_manual_asms_off"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_service_brake_unavailable</div>
+                                <div class="live"><span class="live-icon red"
+                                    id="asb_manual_service_brake_unavailable"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_ebs_pressure_low</div>
+                                <div class="live"><span class="live-icon red" id="asb_manual_ebs_pressure_low"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_mission_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_manual_mission_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_asms_off_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_manual_asms_off_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_service_brake_unavailable_error</div>
+                                <div class="live"><span class="live-icon red"
+                                    id="asb_manual_service_brake_unavailable_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">manual_ebs_pressure_low_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_manual_ebs_pressure_low_error"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">as_relay_sdc</div>
+                                <div class="live"><span class="live-icon red" id="asb_as_relay_sdc"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">asms_on</div>
+                                <div class="live"><span class="live-icon red" id="asb_asms_on"></span></div>
+                              </li>
+    
+                              <li class="adobe-product">
+                                <div class="products">heartbeat_ack</div>
+                                <div class="live"><span class="live-icon red" id="asb_heartbeat_ack"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">heartbeat_error</div>
+                                <div class="live"><span class="live-icon red" id="asb_heartbeat_error"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ebs_proper_pressure</div>
+                                <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_tr_f_front_ok</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_tr_f_rear_ok</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">pc_combo_ok</div>
+                                <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_pressure_front_low</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_pressure_front_high</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_high"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_pressure_rear_low</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_pressure_rear_low"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_pressure_rear_high</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_pressure_rear_high"></span>
+                                </div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">ebs_proper_pressure</div>
+                                <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_tr_f_front_ok</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
+                              </li>
+    
+    
+                              <li class="adobe-product">
+                                <div class="products">brake_tr_f_rear_ok</div>
+                                <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
+                              </li>
+                            </div>
+    
+    
+    
+    
+    
+                          </div>
+                        </div>
+                    </ul>
+                  </div>
+    
                 </div>
               </div>
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -997,99 +1154,99 @@
                             <div class="content-section-title">max_cell_temp</div>
 
                             <li class="adobe-product" id="accu_min_cell_voltage-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_min_cell_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_min_cell_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">min_cell_temp</div>
 
                             <li class="adobe-product" id="accu_min_cell_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_min_cell_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_min_cell_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">dcdc_temp</div>
 
                             <li class="adobe-product" id="accu_dcdc_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_dcdc_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_dcdc_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">max_humidity</div>
 
                             <li class="adobe-product" id="accu_max_humidity-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_max_humidity">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_max_humidity">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">soc_energy</div>
 
                             <li class="adobe-product" id="accu_soc_energy-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_soc_energy">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_soc_energy">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">total_voltage_vs</div>
 
                             <li class="adobe-product" id="accu_total_voltage_vs-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_total_voltage_vs">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_total_voltage_vs">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">accu_current</div>
 
                             <li class="adobe-product" id="accu_accu_current-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_accu_current">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_accu_current">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">max_cell_voltage</div>
 
                             <li class="adobe-product" id="accu_max_cell_voltage-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_max_cell_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_max_cell_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">min_cell_voltage</div>
 
                             <li class="adobe-product" id="accu_min_cell_voltage-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_min_cell_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_min_cell_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">wh_consumed</div>
 
                             <li class="adobe-product" id="accu_wh_consumed-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_wh_consumed">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_wh_consumed">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">ah_consumed</div>
 
                             <li class="adobe-product" id="accu_ah_consumed-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="accu_min_cell_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="accu_min_cell_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <h1 style="font-size: 14px; color: grey; text-decoration: underline;">PDU</h1>
@@ -1097,35 +1254,35 @@
                             <div class="content-section-title">max_cell_temp</div>
 
                             <li class="adobe-product" id="pdu_max_cell_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="pdu_max_cell_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="pdu_max_cell_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">max_cell_voltage</div>
 
                             <li class="adobe-product" id="pdu_max_cell_voltage-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="pdu_max_cell_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="pdu_max_cell_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">min_cell_voltage</div>
 
                             <li class="adobe-product" id="pdu_min_cell_voltage-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="pdu_min_cell_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="pdu_min_cell_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">tdk2_current</div>
 
                             <li class="adobe-product" id="pdu_tdk2_current">
-                              <div class="live" id="pdu_tdk2_current">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              <div class="live" id="pdu_tdk2_current">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                         </div>
@@ -1137,27 +1294,27 @@
                             <div class="content-section-title">curr_lim_igbt_temp</div>
 
                             <li class="adobe-product" id="inv_curr_lim_igbt_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="inv_curr_lim_igbt_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="inv_curr_lim_igbt_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">curr_lim_motor_temp</div>
 
                             <li class="adobe-product" id="inv_curr_lim_motor_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="inv_curr_lim_motor_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="inv_curr_lim_motor_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">no_power_supply_voltage</div>
 
                             <li class="adobe-product" id="inv_no_power_supply_voltage-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="inv_no_power_supply_voltage">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="inv_no_power_supply_voltage">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <h1 style="font-size: 14px; color: grey; text-decoration: underline;">RES</h1>
@@ -1165,9 +1322,9 @@
                             <div class="content-section-title">radio_quality</div>
 
                             <li class="adobe-product" id="res_radio_quality-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="res_radio_quality">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="res_radio_quality">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <h1 style="font-size: 14px; color: grey; text-decoration: underline;">VCU</h1>
@@ -1175,99 +1332,99 @@
                             <div class="content-section-title">brake_front</div>
 
                             <li class="adobe-product" id="vcu_brake_front-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_brake_front">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_brake_front">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">brake_rear</div>
 
                             <li class="adobe-product" id="vcu_brake_rear-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_brake_rear">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_brake_rear">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">actual_torque</div>
 
                             <li class="adobe-product" id="vcu_actual_torque-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_actual_torque">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_actual_torque">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">requested_torque</div>
 
                             <li class="adobe-product" id="vcu_requested_torque-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_requested_torque">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_requested_torque">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">motor_rpm</div>
 
                             <li class="adobe-product" id="vcu_motor_rpm-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_motor_rpm">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_motor_rpm">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">apps1</div>
 
                             <li class="adobe-product" id="vcu_apps1-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_apps1">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_apps1">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">apps2</div>
 
                             <li class="adobe-product" id="vcu_apps2-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_apps2">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_apps2">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">hall_fr</div>
 
                             <li class="adobe-product" id="vcu_hall_fr-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_hall_fr">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_hall_fr">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">hall_fl</div>
 
                             <li class="adobe-product" id="vcu_hall_fl-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_hall_fl">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_hall_fl">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">hall_rr</div>
 
                             <li class="adobe-product" id="vcu_hall_rr-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_hall_rr">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_hall_rr">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">hall_rl</div>
 
                             <li class="adobe-product" id="vcu_hall_rl-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="vcu_hall_rl">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="vcu_hall_rl">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                         </div>
@@ -1278,18 +1435,18 @@
                             <div class="content-section-title">igbt_temp</div>
 
                             <li class="adobe-product" id="ccu_igbt_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="ccu_igbt_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="ccu_igbt_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">motor_temp</div>
 
                             <li class="adobe-product" id="ccu_motor_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="ccu_motor_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="ccu_motor_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <h1 style="font-size: 14px; color: grey; text-decoration: underline;">PLEX</h1>
@@ -1297,27 +1454,27 @@
                             <div class="content-section-title">accel_long</div>
 
                             <li class="adobe-product" id="plex_accel_long-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="plex_accel_long">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="plex_accel_long">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">accel_lat</div>
 
                             <li class="adobe-product" id="plex_accel_lat-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="plex_accel_lat">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="plex_accel_lat">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">gps_speed</div>
 
                             <li class="adobe-product" id="plex_gps_speed-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="plex_gps_speed">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="plex_gps_speed">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <h1 style="font-size: 14px; color: grey; text-decoration: underline;">ASB</h1>
@@ -1325,18 +1482,18 @@
                             <div class="content-section-title">ebs_pressure</div>
 
                             <li class="adobe-product" id="asb_ebs_pressure-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="asb_ebs_pressure">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="asb_ebs_pressure">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">brake_ctrl_temp</div>
 
                             <li class="adobe-product" id="asb_brake_ctrl_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="asb_brake_ctrl_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="asb_brake_ctrl_temp">¯\_(ツ)_/¯</div>
+
                             </li>
 
                           </ul>
@@ -1345,72 +1502,72 @@
                             <div class="content-section-title">fr_temp</div>
 
                             <li class="adobe-product" id="tpms_fr_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_fr_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_fr_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">fr_press</div>
 
                             <li class="adobe-product" id="tpms_fr_press-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_fr_press">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_fr_press">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">fl_temp</div>
 
                             <li class="adobe-product" id="tpms_fl_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_fl_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_fl_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">fl_press</div>
 
                             <li class="adobe-product" id="tpms_fl_press-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_fl_press">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_fl_press">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">rr_temp</div>
 
                             <li class="adobe-product" id="tpms_rr_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_rr_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_rr_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">rr_press</div>
 
                             <li class="adobe-product" id="tpms_rr_press-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_rr_press">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_rr_press">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">rl_temp</div>
 
                             <li class="adobe-product" id="tpms_rl_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_rl_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_rl_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">rl_press</div>
 
                             <li class="adobe-product" id="tpms_rl_press-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="tpms_rl_press">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="tpms_rl_press">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                         </div>
@@ -1420,18 +1577,18 @@
                             <div class="content-section-title">infrared_fr</div>
 
                             <li class="adobe-product" id="ir_infrared_fr-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="ir_infrared_fr">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="ir_infrared_fr">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">infrared_fl</div>
 
                             <li class="adobe-product" id="ir_infrared_fl-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="ir_infrared_fl">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="ir_infrared_fl">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
 
@@ -1439,9 +1596,9 @@
                             <div class="content-section-title">infrared_rl</div>
 
                             <li class="adobe-product" id="ir_infrared_rl-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="ir_infrared_rl">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="ir_infrared_rl">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <h1 style="font-size: 14px; color: grey; text-decoration: underline;">CAN2USB</h1>
@@ -1449,63 +1606,63 @@
                             <div class="content-section-title">lap_counter</div>
 
                             <li class="adobe-product" id="can2usb_lap_counter-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_lap_counter">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_lap_counter">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">brake_target</div>
 
                             <li class="adobe-product" id="can2usb_brake_target-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_brake_target">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_brake_target">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">speed_actual</div>
 
                             <li class="adobe-product" id="can2usb_speed_actual-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_speed_actual">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_speed_actual">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">speed_target</div>
 
                             <li class="adobe-product" id="can2usb_speed_target-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_speed_target">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_speed_target">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">pc_temperature</div>
 
                             <li class="adobe-product" id="can2usb_pc_temperature-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_pc_temperature">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_pc_temperature">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">steering_ctrl_temp</div>
 
                             <li class="adobe-product" id="can2usb_steering_ctrl_temp-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_steering_ctrl_temp">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_steering_ctrl_temp">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
                           <ul>
                             <div class="content-section-title">steering_target</div>
 
                             <li class="adobe-product" id="can2usb_steering_target-cont">
-                              <!-- EVERY SIGNAL HAS ITS OWN ID - in javascript you can use the id to efer to the specific signal and change the color/state of the signal by changing the class from red to green ->see below-->
-                              <div class="live" id="can2usb_steering_target">56</div>
-                              <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
+                              
+                              <div class="live" id="can2usb_steering_target">¯\_(ツ)_/¯</div>
+
                             </li>
                           </ul>
 

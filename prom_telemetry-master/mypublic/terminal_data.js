@@ -13,15 +13,42 @@ socket.on('max_cell_temp', function(arg1 ) {
 
   //  console.log(arg1)
     $('#max_cell_temp').remove()
-    $('<div id="max_cell_temp"></div>').appendTo("#max_cell_temp-cont")
+    $('<div id="max_cell_temp" style = "margin-left: 30%;"></div>').appendTo("#max_cell_temp-cont")
     $('#max_cell_temp').append(arg1)
 
 });
+socket.on('accu_error_position', function(arg1 ) {
+
+  //  console.log(arg1)
+    $('#accu_error_position').remove()
+    $('<div id="accu_error_position" style = "margin-left: 30%;"></div>').appendTo("#accu_error_position-cont")
+    $('#accu_error_position').append(arg1)
+
+});
+
+socket.on('accu_min_cell_voltage_pos', function(arg1 ) {
+
+  //  console.log(arg1)
+    $('#accu_min_cell_voltage_pos').remove()
+    $('<div id="accu_min_cell_voltage_pos" style = "margin-left: 30%;"></div>').appendTo("#accu_min_cell_voltage_pos-cont")
+    $('#accu_min_cell_voltage_pos').append(arg1)
+
+});
+
+socket.on('accu_max_cell_voltage_pos', function(arg1 ) {
+
+  //  console.log(arg1)
+    $('#accu_max_cell_voltage_pos').remove()
+    $('<div id="accu_max_cell_voltage_pos" style = "margin-left: 30%;"></div>').appendTo("#accu_max_cell_voltage_pos-cont")
+    $('#accu_max_cell_voltage_pos').append(arg1)
+
+});
+
 socket.on('igbt_temp', function(arg1 ) {
 
   //  console.log(arg1)
     $('#igbt_temp').remove()
-    $('<div id="igbt_temp"></div>').appendTo("#igbt_temp-cont")
+    $('<div id="igbt_temp" style = "margin-left: 30%;"></div>').appendTo("#igbt_temp-cont")
     $('#igbt_temp').append(arg1)
 
 });
@@ -33,6 +60,7 @@ socket.on('motor_temp', function(arg1 ) {
     $('#motor_temp').append(arg1)
 
 });
+
 socket.on('rpm_rl', function(arg1 ) {
 
   //  console.log(arg1)
@@ -346,15 +374,44 @@ socket.on('accu_max_cell_temp', function(arg1) {
 
   
     $('#accu_max_cell_temp').remove()
-    $('<div id="accu_max_cell_temp"></div>').appendTo("#accu_max_cell_temp-cont")
+    $('<div id="accu_max_cell_temp" style = "margin-left: 30%;"></div>').appendTo("#accu_max_cell_temp-cont")
     $('#accu_max_cell_temp').append(arg1)  
     
 });
+
+
+socket.on('radio_rssi', function(arg1) { 
+
+  
+  $('#radio_rssi').remove()
+  $('<div id="radio_rssi" style = "margin-left: 30%;"></div>').appendTo("#radio_rssi-cont")
+  $('#radio_rssi').append(arg1)  
+  
+});
+
+socket.on('radio_packet_loss', function(arg1) { 
+
+  
+  $('#radio_packet_loss').remove()
+  $('<div id="radio_packet_loss" style = "margin-left: 30%;"></div>').appendTo("#radio_packet_loss-cont")
+  $('#radio_packet_loss').append(arg1)  
+  
+});
+
+socket.on('radio_wrong_crc', function(arg1) { 
+
+  
+  $('#radio_wrong_crc').remove()
+  $('<div id="radio_wrong_crc" style = "margin-left: 30%;"></div>').appendTo("#radio_wrong_crc-cont")
+  $('#radio_wrong_crc').append(arg1)  
+  
+});
+
 socket.on('accu_min_cell_temp', function(arg1) { 
 
   
   $('#accu_min_cell_temp').remove()
-  $('<div id="accu_min_cell_temp"></div>').appendTo("#accu_min_cell_temp-cont")
+  $('<div id="accu_min_cell_temp" style = "margin-left: 30%;"></div>').appendTo("#accu_min_cell_temp-cont")
   $('#accu_min_cell_temp').append(arg1)  
   
 });
@@ -430,7 +487,7 @@ socket.on('accu_ah_consumed', function(arg1) {
   $('#accu_ah_consumed').append(arg1)  
   
 });
-socket.on('accu_max_cell_temp', function(arg1) { 
+socket.on('pdu_max_cell_temp', function(arg1) { 
 
   
   $('#pdu_max_cell_temp').remove()
@@ -607,7 +664,7 @@ socket.on('ccu_igbt_temp', function(arg1) {
 
   
   $('#ccu_igbt_temp').remove()
-  $('<div id="ccu_igbt_temp"></div>').appendTo("#ccu_igbt_temp-cont")
+  $('<div id="ccu_igbt_temp" style = "margin-left: 30%;"></div>').appendTo("#ccu_igbt_temp-cont")
   $('#ccu_igbt_temp').append(arg1)  
   
 });
@@ -615,7 +672,7 @@ socket.on('ccu_motor_temp', function(arg1) {
 
   
   $('#ccu_motor_temp').remove()
-  $('<div id="ccu_motor_temp"></div>').appendTo("#ccu_motor_temp-cont")
+  $('<div id="ccu_motor_temp" style = "margin-left: 30%;"></div>').appendTo("#ccu_motor_temp-cont")
   $('#ccu_motor_temp').append(arg1)  
   
 });
@@ -667,7 +724,7 @@ socket.on('tpms_fr_temp', function(arg1) {
   $('<div id="tpms_fr_temp"></div>').appendTo("#tpms_fr_temp-cont")
   $('#tpms_fr_temp').append(arg1)  
   
-});socket.on('accu_max_cell_temp', function(arg1) { 
+});socket.on('tpms_fr_press', function(arg1) { 
 
   
   $('#tpms_fr_press').remove()
@@ -691,7 +748,7 @@ socket.on('tpms_fl_press', function(arg1) {
   $('#tpms_fl_press').append(arg1)  
   
 });
-socket.on('accu_max_cell_temp', function(arg1) { 
+socket.on('tpms_rr_temp', function(arg1) { 
 
   
   $('#tpms_rr_temp').remove()
@@ -1435,9 +1492,48 @@ socket.on('dash_traction_def', function(arg1) {
 });
 socket.on('dash_mission', function(arg1) {
 
-  console.log(arg1)
-  $('#dash_mission').removeClass('red green')
-  console.log()
+  
+
+  switch(arg1){
+    case 1:
+      $('#dash_mission').remove()
+      $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+      $('#dash_mission').append("Acceleration")  
+      break;
+    case 2:
+      $('#dash_mission').remove()
+      $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+      $('#dash_mission').append("Skidpad")  
+      break;
+    case 4:
+      $('#dash_mission').remove()
+      $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+      $('#dash_mission').append("AutoCross")  
+      break;
+    case 8:
+      $('#dash_mission').remove()
+      $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+      $('#dash_mission').append("TrackDrive")  
+      break;
+    case 16:
+      $('#dash_mission').remove()
+      $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+      $('#dash_mission').append("EBS_Test")  
+      break;
+    case 32:
+      $('#dash_mission').remove()
+      $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+      $('#dash_mission').append("Inspection")  
+      break;
+      case 64:
+        $('#dash_mission').remove()
+        $('<div id="dash_mission"></div>').appendTo("#dash_mission-cont")
+        $('#dash_mission').append("Manual")  
+        break;
+
+        
+
+}
   if (arg1 == 1) {
     $('#dash_mission').addClass(' green'); // Add the 'green' color class
   } else {
