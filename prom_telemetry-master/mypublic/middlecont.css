@@ -20,7 +20,7 @@
 }
 .column-container {
   display: flex;
-  justify-content: space-between; /* Adjust as needed */
+  justify-content: normal; /* Adjust as needed */
 }
 .column {
   flex-basis: 10%; /* Adjust as needed based on the number of columns */
