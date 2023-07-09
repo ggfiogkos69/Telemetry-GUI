@@ -137,6 +137,49 @@
         <ul class="header-menu horizontal-list">
           <li>
             <button id="addcont" onclick="open_bottomcont()">Choose Your Data</button>
+          <script>
+            
+const filepath = 'data.csv';
+    function download_data() {
+      // Read the file content from the server
+      fetch(filepath,{
+          headers : { 
+            'Content-Type': 'application/csv',
+            'Accept': 'application/csv'
+           }
+         })
+        .then(response => response.text())
+        .then(fileContent => {
+          // Get the current time
+          const currentTime = new Date();
+    
+          // Format the current time as a string
+          const timestamp = currentTime.toISOString().replace(/[-:.]/g, '');
+    
+          // Create a Blob object with the file content
+          const blob = new Blob([fileContent], { type: 'csv' });
+    
+          // Create a temporary <a> element and set its attributes
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'file_' + timestamp + '.csv';
+    
+          // Programmatically trigger the click event of the <a> element
+          a.click();
+    
+          // Clean up the URL object after the download
+          URL.revokeObjectURL(a.href);
+        })
+        .catch(error => {
+          console.error('Error reading file:', error);
+        });
+    }
+
+          </script>
+          
+          </li>
+           <li>
+            <button id="addcont" onclick="download_data()">Get Logged Data</button>
           </li>
           <li class="adobe-product" style="float:right; padding-right:20px;">
 
