@@ -369,7 +369,7 @@ socket.on('inv_inv_ok', function(arg1) {
   });
 
   
-
+ 
 socket.on('accu_max_cell_temp', function(arg1) { 
 
   
@@ -1980,15 +1980,15 @@ socket.on('ccu_pumps_on', function(arg1) {
     }
     
   });
-  socket.on('can2usb_steering_ctrl_enab', function(arg1) {
+  socket.on('can2usb_steering_ctrl_enabled', function(arg1) {
 
     console.log(arg1)
-    $('#can2usb_steering_ctrl_enab').removeClass('red green')
+    $('#can2usb_steering_ctrl_enabled').removeClass('red green')
     console.log()
     if (arg1 == 1) {
-      $('#can2usb_steering_ctrl_enab').addClass(' green'); // Add the 'green' color class
+      $('#can2usb_steering_ctrl_enabled').addClass(' green'); // Add the 'green' color class
     } else {
-      $('#can2usb_steering_ctrl_enab').addClass(' red'); // Add the 'red' color class
+      $('#can2usb_steering_ctrl_enabled').addClass(' red'); // Add the 'red' color class
     }
     
   });

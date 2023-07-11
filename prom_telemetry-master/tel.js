@@ -32,180 +32,6 @@ const size = utm.size;
 const os = require('os');
 const { data_dict } = require('./mypublic/data_dict.js');
 
-var data_dict_4csv = [
-  1,
-2,
-3,
-4,
-5,
-6,
-7,
-8,
-9,
-10,
-11,
-12,
-13,
-14,
-15,
-16,
-17,
-18,
-19,
-20,
-21,
-22,
-23,
-24,
-25,
-26,
-27,
-28,
-29,
-30,
-31,
-32,
-33,
-34,
-35,
-36,
-37,
-38,
-39,
-40,
-41,
-42,
-43,
-44,
-45,
-46,
-47,
-48,
-49,
-50,
-51,
-52,
-53,
-54,
-55,
-56,
-57,
-58,
-59,
-60,
-61,
-62,
-63,
-64,
-65,
-66,
-67,
-68,
-69,
-70,
-71,
-72,
-73,
-74,
-75,
-76,
-77,
-78,
-79,
-80,
-81,
-82,
-83,
-84,
-85,
-86,
-87,
-88,
-89,
-90,
-91,
-92,
-93,
-94,
-95,
-96,
-97,
-98,
-99,
-100,
-101,
-102,
-103,
-104,
-105,
-106,
-107,
-108,
-109,
-110,
-111,
-112,
-113,
-114,
-115,
-116,
-117,
-118,
-119,
-120,
-121,
-122,
-123,
-124,
-125,
-126,
-127,
-128,
-129,
-130,
-131,
-132,
-133,
-134,
-135,
-136,
-137,
-138,
-139,
-140,
-141,
-142,
-143,
-144,
-145,
-146,
-147,
-148,
-149,
-150,
-151,
-152,
-153,
-154,
-155,
-156,
-157,
-158,
-159,
-160,
-161,
-162,
-163,
-164,
-165,
-166,
-167,
-168,
-169,
-170
-]
-
-
  var XMLHttpRequest = require('xhr2');
 function convertformat(data) {
   datanew = ''
@@ -232,47 +58,9 @@ let apiRequest = new XMLHttpRequest();
   }
 }
 
-/*function updateChart(value1, value2, value3){ // value1 = right top chart(0-100), value2 = left top chart(0-200), value3 = bottom chart (0-10000) 
-        console.log("PANIKK")
-        //here you can change the class of the signals in the middle container - ie change them from red to green or from green to red
-        var element1 = document.getElementById("IMD") 
-        if(element1.className == "live-icon red") console.log("found")
-        if(value1 > 80 && element1.className == "live-icon red") {
-          element1.classList.remove("red");
-          element1.classList.add("green");
-          console.log("not here")
-    
-         }
-
-          chartInstance.data.labels.push(new Date());
-          chartInstance.data.datasets.forEach((dataset) => {
-              dataset.data.push(value2);
-          });
-          chartInstance2.data.labels.push(new Date());
-          chartInstance2.data.datasets.forEach((dataset) => {
-              dataset.data.push(value3);
-          });
-      
-              chartInstance.data.labels.splice(0, 1);
-        chartInstance.data.datasets[0].data.splice(0, 1);	
-                  
-     
-     
-          chartInstance2.data.labels.splice(0, 1);
-              chartInstance2.data.datasets[0].data.splice(0, 1);
-      
-      //chartInstance3.data.datasets[0].data = [value3, 100-value3];
-      var txt = value1.toString();
-      //chartInstance3.options.elements.center.text = txt;
-          //chartInstance3.update();
-          chartInstance.update(0);
-          chartInstance2.update(0);
-    
-      };   */
 
 
-
-     const filename = 'prom_telemetry-master/public/data.csv';
+     const filename = 'public/data.csv';
 function createCSVFile() {
   let csvContent = Object.keys(data_dict).join(',') + '\n';
 
@@ -302,7 +90,7 @@ function appendToCSV(dictionary) {
     if (err) {
       console.error('Error appending to CSV file:', err);
     } else {
-      console.log('Data successfully appended to CSV file:', filename);
+      // console.log('Data successfully appended to CSV file:', filename);
     }
   });
 }

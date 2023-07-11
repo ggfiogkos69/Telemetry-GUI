@@ -138,8 +138,8 @@
           <li>
             <button id="addcont" onclick="open_bottomcont()">Choose Your Data</button>
           <script>
-            
-const filepath = 'data.csv';
+
+const filepath = 'public/data.csv';
     function download_data() {
       // Read the file content from the server
       fetch(filepath,{
@@ -751,8 +751,8 @@ const filepath = 'data.csv';
     
     
                               <li class="adobe-product">
-                                <div class="products">steering_ctrl_enab</div>
-                                <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_enab"></span></div>
+                                <div class="products">steering_ctrl_enabled</div>
+                                <div class="live"><span class="live-icon red" id="can2usb_steering_ctrl_enabled"></span></div>
                               </li>
     
     
@@ -805,41 +805,8 @@ const filepath = 'data.csv';
                               <li class="adobe-product">
                                 <div class="products">as_status</div>
                                 <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">bspd_error</div>
-                                <div class="live"><span class="live-icon red" id="vcu_bspd_error"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">asb_error</div>
-                                <div class="live"><span class="live-icon red" id="vcu_asb_error"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">sd_closed</div>
-                                <div class="live"><span class="live-icon red" id="vcu_sd_closed"></span></div>
-                              </li>
-                              <li class="adobe-product">
-                                <div class="products">precharge_done</div>
-                                <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">r2d_done</div>
-                                <div class="live"><span class="live-icon red" id="vcu_r2d_done"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">as_status</div>
-                                <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
-                              </li>
+                              </li>    
+
                               <h1 style="font-size: 14px; color: grey; text-decoration: underline;; ">DASH</h1>
                               <li class="adobe-product">
                                 <div class="products">r2d_pressed</div>
@@ -891,27 +858,10 @@ const filepath = 'data.csv';
     
                              
     
-    
+  
                               <li class="adobe-product">
-                                <div class="products">bots_sd</div>
-                                <div class="live"><span class="live-icon red" id="dash_bots_sd"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">cockpit_sd</div>
-                                <div class="live"><span class="live-icon red" id="dash_cockpit_sd"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">inertia_sd</div>
-                                <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
-                              </li>
-    
-                              <li class="adobe-product">
-                                <div class="products">accu_over_60v_dclink</div>
-                                <div class="live"><span class="live-icon red" id="dash_inertia_sd"></span></div>
+                                <div class="products">over_60v_dclink</div>
+                                <div class="live"><span class="live-icon red" id="accu_over_60v_dclink"></span></div>
                               </li>
     
     
@@ -951,21 +901,15 @@ const filepath = 'data.csv';
                                 </div>
                               </li>
                               <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">ACCU</h1>
-                              <li class="adobe-product">
-                                <div class="products">accu_air_m_state</div>
-                                <div class="live"><span class="live-icon red" id="accu_air_m_state"></span></div>
-                              </li>
+
     
                               <li class="adobe-product">
-                                <div class="products">accu_air_m_supp</div>
+                                <div class="products">air_m_supp</div>
                                 <div class="live"><span class="live-icon red" id="accu_air_m_supp"></span></div>
                               </li>
+
                               <li class="adobe-product">
-                                <div class="products">accu_air_p_state</div>
-                                <div class="live"><span class="live-icon red" id="accu_air_p_state"></span></div>
-                              </li>
-                              <li class="adobe-product">
-                                <div class="products">accu_air_p_supp</div>
+                                <div class="products">air_p_supp</div>
                                 <div class="live"><span class="live-icon red" id="accu_air_p_supp"></span></div>
                             </div>
     
@@ -974,13 +918,6 @@ const filepath = 'data.csv';
                               <li class="adobe-product">
                                 <div class="products">pc_combo_ok</div>
                                 <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">brake_pressure_front_low</div>
-                                <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span>
-                                </div>
                               </li>
     
     
@@ -1002,10 +939,6 @@ const filepath = 'data.csv';
                               </li>
     
     
-                              <li class="adobe-product">
-                                <div class="products">res_error</div>
-                                <div class="live"><span class="live-icon red" id="asb_res_error"></span></div>
-                              </li>
     
     
                               <li class="adobe-product">
@@ -1119,12 +1052,6 @@ const filepath = 'data.csv';
     
     
                               <li class="adobe-product">
-                                <div class="products">pc_combo_ok</div>
-                                <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
                                 <div class="products">brake_pressure_front_low</div>
                                 <div class="live"><span class="live-icon red" id="asb_brake_pressure_front_low"></span>
                                 </div>
@@ -1151,22 +1078,7 @@ const filepath = 'data.csv';
                               </li>
     
     
-                              <li class="adobe-product">
-                                <div class="products">ebs_proper_pressure</div>
-                                <div class="live"><span class="live-icon red" id="asb_ebs_proper_pressure"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">brake_tr_f_front_ok</div>
-                                <div class="live"><span class="live-icon red" id="asb_brake_tr_f_front_ok"></span></div>
-                              </li>
-    
-    
-                              <li class="adobe-product">
-                                <div class="products">brake_tr_f_rear_ok</div>
-                                <div class="live"><span class="live-icon red" id="asb_brake_tr_f_rear_ok"></span></div>
-                              </li>
+
                             </div>
     
     
@@ -1192,25 +1104,8 @@ const filepath = 'data.csv';
                     <div class="app-card">
                       <div class="column-container">
                         <div class="column">
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">ACCU</h1>
-                          <ul>
-                            <div class="content-section-title">max_cell_temp</div>
-
-                            <li class="adobe-product" id="accu_min_cell_voltage-cont">
-                              
-                              <div class="live" id="accu_min_cell_voltage">¯\_(ツ)_/¯</div>
-
-                            </li>
-                          </ul>
-                          <ul>
-                            <div class="content-section-title">min_cell_temp</div>
-
-                            <li class="adobe-product" id="accu_min_cell_temp-cont">
-                              
-                              <div class="live" id="accu_min_cell_temp">¯\_(ツ)_/¯</div>
-
-                            </li>
-                          </ul>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">ACCU</h1>
+           
                           <ul>
                             <div class="content-section-title">dcdc_temp</div>
 
@@ -1265,15 +1160,7 @@ const filepath = 'data.csv';
 
                             </li>
                           </ul>
-                          <ul>
-                            <div class="content-section-title">min_cell_voltage</div>
 
-                            <li class="adobe-product" id="accu_min_cell_voltage-cont">
-                              
-                              <div class="live" id="accu_min_cell_voltage">¯\_(ツ)_/¯</div>
-
-                            </li>
-                          </ul>
                           <ul>
                             <div class="content-section-title">wh_consumed</div>
 
@@ -1288,11 +1175,11 @@ const filepath = 'data.csv';
 
                             <li class="adobe-product" id="accu_ah_consumed-cont">
                               
-                              <div class="live" id="accu_min_cell_voltage">¯\_(ツ)_/¯</div>
+                              <div class="live" id="accu_ah_consumed">¯\_(ツ)_/¯</div>
 
                             </li>
                           </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">PDU</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">PDU</h1>
                           <ul>
                             <div class="content-section-title">max_cell_temp</div>
 
@@ -1332,7 +1219,7 @@ const filepath = 'data.csv';
 
                         <div class="column">
 
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">INV</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">INV</h1>
                           <ul>
                             <div class="content-section-title">curr_lim_igbt_temp</div>
 
@@ -1360,7 +1247,7 @@ const filepath = 'data.csv';
 
                             </li>
                           </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">RES</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">RES</h1>
                           <ul>
                             <div class="content-section-title">radio_quality</div>
 
@@ -1370,7 +1257,7 @@ const filepath = 'data.csv';
 
                             </li>
                           </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">VCU</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">VCU</h1>
                           <ul>
                             <div class="content-section-title">brake_front</div>
 
@@ -1473,26 +1360,8 @@ const filepath = 'data.csv';
                         </div>
 
                         <div class="column">
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">CCU</h1>
-                          <ul>
-                            <div class="content-section-title">igbt_temp</div>
 
-                            <li class="adobe-product" id="ccu_igbt_temp-cont">
-                              
-                              <div class="live" id="ccu_igbt_temp">¯\_(ツ)_/¯</div>
-
-                            </li>
-                          </ul>
-                          <ul>
-                            <div class="content-section-title">motor_temp</div>
-
-                            <li class="adobe-product" id="ccu_motor_temp-cont">
-                              
-                              <div class="live" id="ccu_motor_temp">¯\_(ツ)_/¯</div>
-
-                            </li>
-                          </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">PLEX</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">PLEX</h1>
                           <ul>
                             <div class="content-section-title">accel_long</div>
 
@@ -1520,7 +1389,7 @@ const filepath = 'data.csv';
 
                             </li>
                           </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">ASB</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">ASB</h1>
                           <ul>
                             <div class="content-section-title">ebs_pressure</div>
 
@@ -1540,7 +1409,7 @@ const filepath = 'data.csv';
                             </li>
 
                           </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">TPMS</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">TPMS</h1>
                           <ul>
                             <div class="content-section-title">fr_temp</div>
 
@@ -1615,7 +1484,7 @@ const filepath = 'data.csv';
                           </ul>
                         </div>
                         <div class=column>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">IR</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">IR</h1>
                           <ul>
                             <div class="content-section-title">infrared_fr</div>
 
@@ -1644,7 +1513,7 @@ const filepath = 'data.csv';
 
                             </li>
                           </ul>
-                          <h1 style="font-size: 14px; color: grey; text-decoration: underline;">CAN2USB</h1>
+                          <h1 style="font-size: 16px; color: white; text-decoration: underline;padding: 5px;">CAN2USB</h1>
                           <ul>
                             <div class="content-section-title">lap_counter</div>
 
