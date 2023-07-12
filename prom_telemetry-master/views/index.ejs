@@ -213,7 +213,7 @@ const filepath = 'public/data.csv';
           <div class="content-wrapper">
             <div class="content-section">
               
-              <ul style="height: 70px; width: 80%;margin-left: 60px;">
+              <ul style="height: 70px; width: 95%;margin-left: 7px;">
                 <div class="content-section-title">BMS ERRORS</div>
 
                 <li class="adobe-product" id="accu_bms_error_code-cont">
@@ -222,7 +222,7 @@ const filepath = 'public/data.csv';
                   <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
                 </li>
               </ul>
-              <ul style="height: 70px; width: 80%;margin-left: 60px;margin-top: 10px;">
+              <ul style="height: 70px; width: 95%;margin-left: 7px;margin-top: 10px;">
                 <div class="content-section-title">TSAC ERRORS</div>
 
                 <li class="adobe-product" id="accu_tsac_error_code-cont">
@@ -231,7 +231,7 @@ const filepath = 'public/data.csv';
                   <!-- live icon is a class red is also a class, see css file the red class is described there also the green class is described there, see updatechart.js code how to change classes-->
                 </li>
               </ul>
-              <ul style="height: 70px; width: 80%;margin-left: 60px;margin-top: 10px;">
+              <ul style="height: 70px; width: 95%;margin-left:7px;margin-top: 10px;">
                 <div class="content-section-title">MISSION</div>
 
                 <li class="adobe-product" id="dash_mission-cont">
@@ -351,7 +351,7 @@ const filepath = 'public/data.csv';
         display: block;
         scroll-behavior: smooth;
         width: 100%;
-        height: auto;
+        height: 400px;
         color: white;
         /* justify-content: space-around; */
         padding-left: 0;
@@ -361,6 +361,7 @@ const filepath = 'public/data.csv';
         align-items: start;
         
         ">
+        <h1 style = "font-size: 17px;text-align:center;padding: 10px;">TELEMETRY</h1>
         <ul style = "height: 50px; width: 100%;">
           <div class="content-section-title" style = "margin-left: 5%;">RSSI</div>
 
@@ -561,7 +562,7 @@ const filepath = 'public/data.csv';
                           <div class="column-container">
     
                             <div class="column">
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">INV</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;;">INV</h1>
                               <li class="adobe-product">
     
                                 <div class="products">inv_enable</div>
@@ -682,7 +683,7 @@ const filepath = 'public/data.csv';
     
                             </div>
                             <div class="column">
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">CAN2USB</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;;">CAN2USB</h1>
                               <li class="adobe-product">
                                 <div class="products">vn_200_ok</div>
                                 <div class="live"><span class="live-icon red" id="can2usb_vn_200_ok"></span></div>
@@ -789,7 +790,7 @@ const filepath = 'public/data.csv';
                               </li>
                             </div>
                             <div class="column">
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">VCU</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;;">VCU</h1>
                               <li class="adobe-product">
                                 <div class="products">precharge_done</div>
                                 <div class="live"><span class="live-icon red" id="vcu_precharge_done"></span></div>
@@ -807,7 +808,7 @@ const filepath = 'public/data.csv';
                                 <div class="live"><span class="live-icon red" id="vcu_as_status"></span></div>
                               </li>    
 
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;; ">DASH</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;; ">DASH</h1>
                               <li class="adobe-product">
                                 <div class="products">r2d_pressed</div>
                                 <div class="live"><span class="live-icon red" id="dash_r2d_pressed"></span></div>
@@ -869,7 +870,7 @@ const filepath = 'public/data.csv';
     
     
     
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;">CCU</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;">CCU</h1>
                               <li class="adobe-product">
                                 <div class="products">pumps_on</div>
                                 <div class="live"><span class="live-icon red" id="ccu_pumps_on"></span></div>
@@ -900,7 +901,7 @@ const filepath = 'public/data.csv';
                                 <div class="live"><span class="live-icon red" id="ccu_device_temp_limit_reached"></span>
                                 </div>
                               </li>
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;;">ACCU</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;;">ACCU</h1>
 
     
                               <li class="adobe-product">
@@ -914,7 +915,7 @@ const filepath = 'public/data.csv';
                             </div>
     
                             <div class="column">
-                              <h1 style="font-size: 14px; color: grey; text-decoration: underline;">ASB</h1>
+                              <h1 style="font-size: 14px; color: white; text-decoration: underline;">ASB</h1>
                               <li class="adobe-product">
                                 <div class="products">pc_combo_ok</div>
                                 <div class="live"><span class="live-icon red" id="asb_pc_combo_ok"></span></div>
@@ -1160,7 +1161,15 @@ const filepath = 'public/data.csv';
 
                             </li>
                           </ul>
-
+                          <ul style = "height: 50px; width: 100%;">
+                            <div class="content-section-title" style = "margin-left: 5%;">Min Cell Voltage</div>
+                  
+                            <li class="adobe-product" id="accu_min_cell_voltage-cont">
+                              
+                              <div class="live" id="accu_min_cell_voltage" style = "margin-left: 30%;">¯\_(ツ)_/¯</div>
+                  
+                            </li>
+                          </ul>
                           <ul>
                             <div class="content-section-title">wh_consumed</div>
 
@@ -1647,7 +1656,7 @@ const filepath = 'public/data.csv';
         for (let x in data_dict) {
           var num = String(data_dict[x])
           var name = String(x)
-          var button = "<button class='data-type choose' id='id-" + num + "'>" + name + "</button>";
+          var button = "<button class='data-type choose' id='id-" + num + "' style= 'word-break: break-all;height:88px;'>" + name + "</button>";
           document.getElementById("choose_cont").innerHTML += button;
         }
         const elements = document.querySelectorAll('.choose');

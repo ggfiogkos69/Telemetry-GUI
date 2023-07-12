@@ -66,10 +66,11 @@ html{
 }
 
 body {
-    background-color: #343d4b;
-    width:1800px !important;
-    min-height: 100vh !important;
-    overflow: scroll;
+  overflow-x: clip;
+  background-color: #343d4b;
+  width: 1800px !important;
+  min-height: 100vh !important;
+  overflow-y: auto;
 
 }
 ::-webkit-scrollbar {
@@ -353,20 +354,26 @@ left: 10;
 .addcont-cont {
 
 
+  overflow-x: hidden;
+  right: 0;
+  padding: 30px;
+  overflow-y: hidden;
   position: fixed;
   display: none;
-  width: max-content;
-  height:max-content;
+  overflow-y: hidden;
+  width: 600px;
+  height: 936px;
+  float: right;
   background-color: #181B1F60;
-  bottom:0;
-
+  bottom: 0;
 }
 .wrap {
 
 
+  height: 1000px;
   float: left;
-  width: 85vw;
-  height:230px;
+  width: 42vw;
+  overflow-y: scroll;
 
 }
 .data-type {
@@ -448,7 +455,7 @@ left: 10;
   height: 1100px;
   left: 100px;
   width: 117%;
-  margin-left: 75px;
+  margin-left: 0px;
 }
 
 .wrapper2{
